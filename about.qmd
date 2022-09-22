@@ -1,0 +1,10 @@
+---
+title: "About me"
+---
+
+I am a PhD student in biostatistics at the University of Zurich supervised
+jointly by Prof. Beate Sick and Prof. Torsten Hothorn. My research interests are
+combining distributional regression models with deep learning approaches and
+causal inference to improve treatment decisions for acute ischemic stroke
+patients.
+

@@ -1,0 +1,8 @@
+---
+title: "Software"
+---
+
+```{r echo=FALSE, results='asis'}
+biblio <- bibtex::read.bib("software.bib")
+sort(biblio, decreasing = TRUE)
+```

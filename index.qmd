@@ -1,0 +1,19 @@
+---
+title: ""
+---
+
+<div style="text-align: right"> 
+```{r echo=FALSE}
+knitr::include_graphics("img/profile-modified.png")
+```
+</div>
+
+Lucas Kook
+==========
+
+Welcome to my academic personal website!
+
+```{r child="about.qmd"}
+
+```
+

@@ -1,0 +1,84 @@
+---
+title: "Curriculum Vitae"
+---
+
+Education
+======
+* Ph.D in Biostatistics, University of Zurich, 03/2020--02/2023 (expected)
+* M.S. in Biostatistics, University of Zurich, Switzerland, 09/2018--02/2020
+* B.S. in Molecular Medicine, University of Freiburg, Germany, 10/2015--06/2018
+
+Work experience
+======
+
+* 09/2022--present Junior editor
+  * Journal of Statistical Software
+
+* 04/2022--07/2022 Visiting PhD student
+  * University of Copenhagen
+  * Supervisor: Prof. Jonas Peters
+
+* 03/2018--present: PhD candidate in computational biostatistics
+  * University of Zurich, Zurich University of Applied Sciences
+  * Supervisor: Prof. Beate Sick, Prof. Torsten Hothorn
+
+* 11/2018--08/2019: Research assistant
+  * Functional Genomics Center Zurich, University of Zurich, ETH Zurich
+  * Supervisor: Dr. Witold Wolski
+
+* 01/2017--08/2018: Research assistant
+  * University of Freiburg
+  * Supervisor: Prof. Oliver Schilling
+
+Teaching Experience
+======
+* Student supervision
+  * 3 Master students at UZH/ETHZ
+
+* STA406 Generalized Regression (UZH, FS19/20/21)
+
+* STA408 Statistical methods in epidemiology (UZH, SS20)
+
+* STA402/MAT924 Likelihood inference (UZH, FS19)
+
+* Introductory practical in physical chemistry for molecular medicine (ALU, SS18)
+
+Awards and Scholarships
+======
+* 12/2021: GRC Travel Grant (Unviersity of Copenhagen, Host: Prof. Jonas Peters)
+* 2015--2020: Full scholarship of the Academic Foundation of the German People
+* 2015--2020: Full scholarship of the Lion's Club Viersen e.V.
+  
+Software
+======
+* Programming languages
+  * R, Bash, Julia, Python
+
+* Miscellaneous
+  * Git, SVN, make, LaTeX, knitr, Docker
+
+* Contributed R packages
+  * [<bf>tramvs</bf>](https://r-forge.r-project.org/R/?group_id=1322)
+  * [<bf>deepregression</bf>](https://cran.r-project.org/package=deepregression)
+  * [<bf>prora</bf>](https://protviz.github.io/prora/)
+  * [<bf>tramnet</bf>](https://cran.r-project.org/package=tramnet)
+
+Languages
+======
+* English (Full professional proficiency)
+* German (Native proficiency)
+* French (Basic knowledge)
+
+Publications
+============
+
+```{r child="publications.qmd"}
+
+```
+
+Talks
+=====
+
+```{r child="talks.qmd"}
+
+```

@@ -1,0 +1,8 @@
+---
+title: "Publications"
+---
+
+```{r echo=FALSE, results='asis'}
+biblio <- bibtex::read.bib("publications.bib")
+sort(biblio, decreasing = TRUE)
+```
