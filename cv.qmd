@@ -18,7 +18,7 @@ Work experience
   * University of Copenhagen
   * Supervisor: Prof. Jonas Peters
 
-* 03/2018--present: PhD candidate in computational biostatistics
+* 03/2020--present: PhD candidate in computational biostatistics
   * University of Zurich, Zurich University of Applied Sciences
   * Supervisor: Prof. Beate Sick, Prof. Torsten Hothorn
 
