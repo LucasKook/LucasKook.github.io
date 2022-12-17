@@ -1,0 +1,985 @@
+\documentclass[english, 10pt, aspectratio=169]{beamer}
+
+%% Handout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[a4paper,landscape,border shrink=5mm]
+
+%% Theme
+% \usetheme{biostat}
+\usetheme{metropolis}
+
+%% Inputs
+\input{defs}
+\input{tikz-stuff}
+
+%% Packages
+\usepackage{amsfonts,amstext,amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\usepackage{pifont}
+\usepackage{mathtools}
+\usepackage{fontawesome}
+\usepackage[round]{natbib}
+\usepackage[default]{sourcesanspro}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{doi}
+\usepackage{centernot}
+\usepackage{tcolorbox}
+% \setbeamercovered{transparent}
+
+%% New commands
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+\setcitestyle{authoryear,open={(},close={)}}
+\renewcommand{\thefootnote}{}
+\renewcommand{\bibsection}{}
+\usepackage{enumitem}
+\setlist[itemize]{label=\textbullet}
+\newcommand{\mycite}[1]{%
+\begin{flushright}
+\footnotesize
+\alert{\href{https://doi.org/#1}{{#1}}}
+\end{flushright}}
+\newcommand{\mblue}[1]{\textcolor{blue!80}{#1}}
+\newcommand{\mred}[1]{\textcolor{red!80}{#1}}
+\newcommand{\mgray}[1]{\textcolor{gray!80}{#1}}
+\newcommand{\bblue}[1]{\textbf{\textcolor{chineseBlue}{#1}}}
+\newcommand{\bred}[1]{\textbf{\textcolor{red!80}{#1}}}
+\newcommand{\bcd}{\boldsymbol\cdot}
+
+%% Colors
+\definecolor{memered}{HTML}{023FA5}
+\definecolor{memeblue}{HTML}{8E063B}
+\definecolor{chineseBlue}{RGB}{60, 88, 152}
+\definecolor{metallicBlue}{RGB}{41, 72, 125}
+\definecolor{wildBlueYonder}{RGB}{156, 178, 206}
+\definecolor{gainsboro}{RGB}{212, 216, 232}
+\definecolor{AHViolet}{HTML}{AE78B1} % Arts and Humanities, Pantone 7440
+\definecolor{STGreen}{HTML}{87BC1F} % Science and Technology, Pantone 376
+\setbeamercolor{frametitle}{bg = metallicBlue}
+\setbeamercolor{progress bar}{fg = metallicBlue}
+\setbeamercolor{block title example}{fg = metallicBlue, bg = white}
+\setbeamercolor{background canvas}{bg=white}
+
+\titlegraphic{%
+\vspace{-0.8cm}
+\hfill
+\resizebox{0.75\textwidth}{!}{%
+\includegraphics[width=0.25\textwidth]{img/uzh}
+\hspace{1cm}
+\includegraphics[width=0.2\textwidth]{img/zhaw}
+\hspace{1cm}
+\includegraphics[width=0.3\textwidth]{img/snf}
+\hspace{1cm}
+\includegraphics[width=0.25\textwidth]{img/novartis}%
+}%
+\vspace{2.5cm}
+\begin{flushright}
+\includegraphics[width=0.4\textwidth]{img/wc}%
+\end{flushright}
+}
+\title[]{\textbf{Ensembling deep transformation models}}
+\subtitle[]{Advances in statistical modeling with neural networks}
+\author[Lucas Kook]{\textbf{Lucas Kook}, Andrea Goetschi, Philipp FM Baumann,\\
+Torsten Hothorn, Beate Sick\\[6pt]}
+\date{\textbf{CMStatistics 2022}\\December 16, 2022\\[6pt]
+\footnotesize \faTwitter\; \href{https://twitter.com/kook_lucas}{Kook\_Lucas}\\
+\hspace{0.2cm} \faGithub\; \href{https://github.com/LucasKook}{LucasKook}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<<setup, include=FALSE,purl=FALSE>>=
+set.seed(24101968)
+library(knitr)
+library(survival)
+library(tram)
+library(colorspace)
+library(jpeg)
+library(tidyverse)
+
+opts_chunk$set(fig.path = 'figures/', fig.show = 'hold', cache = TRUE, 
+							 fig.height = 4, fig.width = 6, size = "footnotesize", 
+							 warning = FALSE, error = FALSE, message = FALSE)
+options(prompt = "R> ", continue = "+  ", useFancyQuotes = FALSE)
+options(width = 75, digits = 3)
+opar <- par(c("mar", "mfrow", "las"))
+data("GBSG2", package = "TH.data")
+col2 <- diverge_hcl(2)
+@
+%-------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\setbeamertemplate{headline}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile,t]{Setup}
+\vspace{-0.4cm}
+\begin{columns}[T]
+\begin{column}{0.3\textwidth}
+\center
+\textbf{Available data:}
+\vspace{0.3cm}
+
+\resizebox{!}{0.6\textheight}{
+\begin{tikzpicture}
+\node (1y) {\includegraphics[width=1.5cm, height=1.5cm]{img/iris}};
+\node[right=0.2cm of 1y] (2y) {\includegraphics[width=1.5cm, height=1.5cm]{img/adc}};
+\node[below=0.55cm of 1y] (3y) {\includegraphics[width=1.5cm, height=1.5cm]{img/flair}};
+\node[right=0.2cm of 3y] (4y) {\href{https://static.thenounproject.com/png/2218873-200.png}{\includegraphics[width=1.5cm, height=1.5cm]{img/ehr3}}};
+\node[above=-0.10cm of 1y] {\footnotesize Tabular};
+\node[above=-0.16cm of 2y] {\footnotesize Image};
+\node[above=-0.10cm of 3y] {\footnotesize Image};
+\node[above=-0.03cm of 4y] {\footnotesize Text};
+\end{tikzpicture}}
+\end{column}
+\pause
+\begin{column}{0.05\textwidth}
+\vspace{3.5cm}
+\Large$\longrightarrow$
+\end{column}
+\begin{column}{0.3\textwidth}
+\center
+\textbf{Response:}
+\vspace{0.3cm}
+
+\resizebox{!}{0.6\textheight}{
+\begin{tikzpicture}
+\node (1y) {%
+<<echo=FALSE,fig.asp=1,out.width="1.5cm">>=
+par(mar = c(0.1, 0.1, 0.1, 0.1), las = 1)
+plot(ecdf(rnorm(100)), pch = 20, main = "", ylab = "", xlab = "", axes = FALSE,
+     lwd = 2)
+box()
+par(opar)
+@
+% \includegraphics[width=1.5cm, height=1.5cm]{img/rcont}
+};
+\node[right=0.2cm of 1y] (2y) {%
+<<echo=FALSE, fig.asp=1, out.width="1.5cm">>=
+par(mar = c(0.1, 0.1, 0.1, 0.1), las = 1)
+plot(survfit(Surv(time, cens) ~ 1, data = GBSG2), xlab = "", axes = FALSE, 
+		 ylab = "", mark.time = TRUE, mark = "|")
+box()
+par(opar)
+@
+% \includegraphics[width=1.5cm, height=1.5cm]{img/rsurv}
+};
+\node[below=0.5cm of 1y] (3y) {%
+<<echo=FALSE, fig.asp=1, out.width="1.5cm">>=
+par(mar = c(0.1, 0.1, 0.1, 0.1), las = 1)
+plot(dpois(1:20, lambda = 4), type = "h", axes = FALSE, ylab = "", xlab = "",
+		 lwd = 5)
+box()
+par(opar)
+@
+% \includegraphics[width=1.5cm, height=1.5cm]{img/rcount}
+};
+\node[right=0.2cm of 3y] (4y) {%
+<<echo=FALSE, fig.asp=1, out.width="1.5cm">>=
+par(mar = c(0.1, 0.1, 0.1, 0.1), las = 1)
+plot(table(sample(1:5, 100, replace = TRUE, prob = 1 - abs(3 - 1:5)/5)), 
+		 type = "h", ylab = "", xlab = "", axes = FALSE, lwd = 5, bty = "o")
+par(opar)
+@
+%\includegraphics[width=1.5cm, height=1.5cm]{img/rord}
+};
+\node[above=-0.1cm of 1y] {\footnotesize Continuous};
+\node[above=-0.10cm of 2y] {\footnotesize Survival};
+\node[above=-0.10cm of 3y] {\footnotesize Count};
+\node[above=-0.10cm of 4y] {\footnotesize Ordinal};
+\end{tikzpicture}}
+\end{column}
+\end{columns}
+
+\vspace{0.3cm}
+\only<2>{
+How do changes in the predictors propagate to the \bblue{distribution} of the response?
+}
+
+\end{frame}
+%-------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t,fragile]{Setup}
+\vspace{-0.4cm}
+\begin{columns}[T]
+\begin{column}{0.3\textwidth}
+\center
+\textbf{Available data:}
+\vspace{0.3cm}
+
+\resizebox{!}{0.6\textheight}{
+\begin{tikzpicture}
+\node (1y) {\includegraphics[width=1.5cm, height=1.5cm]{img/iris}};
+\node[right=0.2cm of 1y] (2y) {\includegraphics[width=1.5cm, height=1.5cm]{img/adc}};
+\node[below=0.55cm of 1y] (3y) {\includegraphics[width=1.5cm, height=1.5cm]{img/flair}};
+\node[right=0.2cm of 3y] (4y) {\href{https://static.thenounproject.com/png/2218873-200.png}{\includegraphics[width=1.5cm, height=1.5cm]{img/ehr3}}};
+\node[above=-0.10cm of 1y] {\footnotesize Tabular};
+\node[above=-0.16cm of 2y] {\footnotesize Image};
+\node[above=-0.10cm of 3y] {\footnotesize Image};
+\node[above=-0.03cm of 4y] {\footnotesize Text};
+\only<1,2>{
+\node[above=-1.2cm of 1y] {\bf \alert{DL!}};
+\node[above=-1.2cm of 2y] {\bf \alert{DL!}};
+\node[above=-1.2cm of 3y] {\bf \alert{DL!}};
+\node[above=-1.2cm of 4y] {\bf \alert{DL!}};
+}
+\end{tikzpicture}}
+\only<3>{
+\vspace{-0.4cm}
+\begin{tcolorbox}
+How can we handle non-tabular data?
+\end{tcolorbox}
+}
+\end{column}
+\pause
+\begin{column}{0.05\textwidth}
+\vspace{3.5cm}
+\Large$\longrightarrow$
+\end{column}
+\begin{column}{0.3\textwidth}
+\center
+\textbf{Response:}
+\vspace{0.3cm}
+
+\resizebox{!}{0.6\textheight}{
+\begin{tikzpicture}
+\node (1y) {%
+<<echo=FALSE,fig.asp=1,out.width="1.5cm">>=
+par(mar = c(0.1, 0.1, 0.1, 0.1), las = 1)
+plot(ecdf(rnorm(100)), pch = 20, main = "", ylab = "", xlab = "", axes = FALSE,
+     lwd = 2)
+box()
+par(opar)
+@
+% \includegraphics[width=1.5cm, height=1.5cm]{img/rcont}
+};
+\node[right=0.2cm of 1y] (2y) {%
+<<echo=FALSE, fig.asp=1, out.width="1.5cm">>=
+par(mar = c(0.1, 0.1, 0.1, 0.1), las = 1)
+plot(survfit(Surv(time, cens) ~ 1, data = GBSG2), xlab = "", axes = FALSE, 
+		 ylab = "", mark.time = TRUE, mark = "|")
+box()
+par(opar)
+@
+% \includegraphics[width=1.5cm, height=1.5cm]{img/rsurv}
+};
+\node[below=0.5cm of 1y] (3y) {%
+<<echo=FALSE, fig.asp=1, out.width="1.5cm">>=
+par(mar = c(0.1, 0.1, 0.1, 0.1), las = 1)
+plot(dpois(1:20, lambda = 4), type = "h", axes = FALSE, ylab = "", xlab = "",
+		 lwd = 5)
+box()
+par(opar)
+@
+% \includegraphics[width=1.5cm, height=1.5cm]{img/rcount}
+};
+\node[right=0.2cm of 3y] (4y) {%
+<<echo=FALSE, fig.asp=1, out.width="1.5cm">>=
+par(mar = c(0.1, 0.1, 0.1, 0.1), las = 1)
+plot(table(sample(1:5, 100, replace = TRUE, prob = 1 - abs(3 - 1:5)/5)), 
+		 type = "h", ylab = "", xlab = "", axes = FALSE, lwd = 5, bty = "o")
+par(opar)
+@
+%\includegraphics[width=1.5cm, height=1.5cm]{img/rord}
+};
+\node[above=-0.1cm of 1y] {\footnotesize Continuous};
+\node[above=-0.10cm of 2y] {\footnotesize Survival};
+\node[above=-0.10cm of 3y] {\footnotesize Count};
+\node[above=-0.10cm of 4y] {\footnotesize Ordinal};
+\only<2>{
+\node[above=-1.20cm of 1y] {\bf \alert{Lm!}};
+\node[above=-1.20cm of 2y] {\bf \alert{Coxph!}};
+\node[above=-1.20cm of 3y] {\bf \alert{Poisson!}};
+\node[above=-1.20cm of 4y] {\bf \alert{Polr!}};
+}
+\end{tikzpicture}}
+
+<<echo=FALSE, fig.align='center', fig.asp=1, out.width="15%", include=FALSE>>=
+par(mar = c(0.1, 0.1, 0.1, 0.1), las = 1)
+hist(rnorm(100), pch = 20, main = "",
+		 ylab = "", xlab = "", axes = FALSE, lwd = 2)
+box()
+plot(survfit(Surv(time, cens) ~ 1, data = GBSG2), xlab = "", axes = FALSE, 
+		 ylab = "", mark.time = TRUE, mark = "|")
+box()
+plot(-1:1, rep(0, 3), pch = 20, axes = FALSE, xlim = c(-5, 5), cex = 1.5)
+plot(dpois(1:20, lambda = 4), type = "h", axes = FALSE, ylab = "", xlab = "",
+		 lwd = 5)
+box()
+plot(table(sample(1:5, 100, replace = TRUE, prob = 1 - abs(3 - 1:5)/5)), 
+		 type = "h", ylab = "", xlab = "", axes = FALSE, lwd = 5, bty = "o")
+par(opar)
+@
+
+\only<3>{
+\begin{tcolorbox}
+How can we cover all response types?
+\end{tcolorbox}
+}
+\end{column}
+\end{columns}
+
+\end{frame}
+%-------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{A bird's eye view on regression}
+% Everything is in the (conditional) distribution
+  % $$\pYx(\bcd) \coloneqq \Prob(\rY \leq \bcd \given \rX = \rx)$$
+
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+$$\pYx(\bcd) \coloneqq \Prob(\rY \leq \bcd \given \rX = \rx)$$
+  \vspace{0.05cm}
+\begin{itemize}
+  \item \textcolor<2,3>{gray!80}{Normal linear regression}
+    $$
+    \textcolor<2,3>{gray!80}{
+     \pYx(\ry) = \textcolor<1,4>{red!80}{\Phi(}
+    \textcolor<1,4>{blue!80}{\sigma^{-1}(\ry - \alpha + \rx^\top\shiftparm)}
+    \textcolor<1,4>{red!80}{)}
+    }$$
+  \item \textcolor<1,3>{gray!80}{Proportional odds logistic regression}
+    $$
+    \textcolor<1,3>{gray!80}{
+    \pYx(\ry_k) = \textcolor<2,4>{red!80}{\expit(}\textcolor<2,4>{blue!80}{\eparm_k
+    + \rx^\top\shiftparm}\textcolor<2,4>{red!80}{)}}$$
+  \item \textcolor<1,2>{gray!80}{Cox proportional hazards model}
+    $$
+    \textcolor<1,2>{gray!80}{
+    \pYx(\ry) = \textcolor<3,4>{red!80}{1 - \exp(-\exp(}
+    \textcolor<3,4>{blue!80}{\log\Lambda_0(\ry) +
+    \rx^\top\shiftparm}\textcolor<3,4>{red!80}{))}}$$
+  \item<4> And many more ...
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\only<4>{
+\center
+\includegraphics[width=0.9\textwidth]{img/coxph.pdf}
+\begin{tcolorbox}[width=0.8\textwidth]
+\textbf{Transformation models}
+\begin{align*}
+  \pYx(\ry) = \mred{\pZ(}\mblue{\hY(\ry) + \rx^\top\shiftparm}\mred{)}
+\end{align*}
+\end{tcolorbox}
+}
+\only<1>{
+\center
+\includegraphics[width=0.9\textwidth]{img/nlrm.pdf}
+}
+\only<2>{
+\center
+\includegraphics[width=0.9\textwidth]{img/polr.pdf}
+}
+\only<3>{
+\center
+\includegraphics[width=0.9\textwidth]{img/coxph.pdf}
+}
+\end{column}
+\end{columns}
+\end{frame}
+%-------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Example: Parametrization of an additive transformation function}
+\center
+\begin{tikzpicture}[auto, Arr/.style={-{Latex[length=1.5mm]}}]
+% \node at (-1, 0.75) {\textsf{B}};
+\node (res) {};
+\node[below=of res, circle, draw] (tab) {$\rx_1$};
+\node[left=0cm of tab] {\Large\faTable};
+\node[below=of tab, circle, draw] (text) {$\rx_2$};
+\node[left=0cm of text] {\Large\faBook};
+\node[right=of res, circle, draw] (basisy) {$\ry$};
+\node[right=of tab] (basisx1) {$\rx_1^\top\shiftparm_1$};
+\node[right=of text] (basisx2) {$\beta_2(\rx_2)$};
+\node[right=of basisx1] (trafo) {$\h(\ry \given \rx_1, \rx_2) \coloneqq 
+    % \overbrace{\basisy(\ry)^\top\parm}^{\mathtt{interacting}} + 
+    \hY(\ry) +
+    \rx_1^\top\shiftparm_1 + \beta_2(\rx_2)$};
+\node[right=of trafo, draw] (dctm) {\textbf{DCTM}};
+\node[above=of dctm] (pZ) {$\pZ$};
+% \draw[Arr] (res) -- node [midway, above] {$\basisy$} (basisy);
+\draw[Arr] (tab) -- (basisx1);
+\draw[Arr] (text) -- (basisx2);
+\draw[Arr] (basisy) -- ($(trafo.west) + (0.1, 0.2)$);
+\draw[Arr] (basisx1) -- ($(trafo.west) + (0, 0.0)$);
+\draw[Arr] (basisx2) -- ($(trafo.west) + (0.1, -0.2)$);
+\draw[Arr] (pZ) -- (dctm);
+\draw[Arr] (trafo) -- (dctm);
+\end{tikzpicture}
+
+\footnotesize{\mgray{DCTM:~Deep conditional transformation model \hspace{0.1cm}
+\faTable:~Tabular data \hspace{0.1cm} \faBook:~Text data}}
+\mycite{10.48550/arXiv.2211.13665}
+\end{frame}
+%-------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Example: Parametrization of an additive transformation function}
+\center
+$\h(\ry \given \rx_1, \rx_2) \coloneqq \hY(\ry) + \rx_1^\top\shiftparm_1 + 
+\beta_2(\rx_2)$
+\includegraphics[width=0.8\textwidth]{img/fig1sub.pdf}
+  \vspace{-0.2cm}
+\mycite{10.48550/arXiv.2211.13665}
+\end{frame}
+%-------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{DCTMs are not enough}
+Individual deep learning models may make \bblue{unreliable predictions}
+
+\vspace{0.5cm}
+
+\begin{center}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\textbf{Common criticism:}
+\begin{itemize}
+	\item No uncertainty quantification
+	\item Small {sample sizes}
+	\item {Stochastic} fitting procedure
+\end{itemize}
+\pause
+\vspace{0.5cm}
+\bblue{Deep ensembles} improve prediction
+\begin{itemize}
+\small
+	\item[\code{1.}] Fit $M$ instances of the same model
+	\item[\code{2.}] Average their $M$ predictions
+\end{itemize}
+\end{column}
+\begin{column}{0.4\textwidth}
+\includegraphics[width=\textwidth]{img/lin-ens.pdf}
+\small
+$$\epYxb(\bcd) = \sum_{m = 1}^M 
+F^m_{\rY \given \rX = \rx}(\bcd)$$
+\end{column}
+\end{columns}
+\end{center}
+
+\pause
+
+\vspace{-0.5cm}
+
+\alert{Deep ensembles lose additivity and interpretability!}
+\end{frame}
+%-------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Transformation ensembles}
+\vspace{0.5cm}
+Transformation ensembles average the \bblue{transformation function} instead
+
+$$\epYxb(\bcd) \coloneqq \pZ\left(\sum_{m = 1}^M \hY^m(\bcd) +
+  \beta^m(\rx)\right)$$
+
+\mycite{10.48550/arXiv.2205.12729}
+
+\begin{columns}[T]
+\begin{column}{0.45\textwidth}
+\begin{itemize}
+	\item<1-> Remain partially \bblue{interpretable}
+	\item<2-> Quantify \bblue{algorithmic uncertainty}
+	% \item<3-> Yield more \bblue{stable predictions}
+	\item<3-> Perform \bblue{on par} with deep ensembles
+\end{itemize}
+\end{column}
+\begin{column}{0.55\textwidth}
+% \center
+\only<1>{%
+    \resizebox{0.49\textwidth}{!}{%
+    \LARGE
+    \begin{tikzpicture}
+        \draw node[anchor=west] at (-2.5, 4) {{\LARGE\hspace{0.5cm} Classical ensembles}};
+        \draw[smooth cycle, tension=0.4, fill=white, pattern color=purple!30, 
+        pattern=north east lines, opacity=0.9] plot coordinates{(2,3) 
+        (-1.5,0) (3,-4) (7,1)} node at (5,2.8) {$\calG$};
+        \draw[smooth cycle, tension=0.4, fill=white, pattern color=brown!40, 
+        pattern=north west lines, opacity=0.9] plot coordinates{(2,2) 
+        (-0.5,0) (3,-2) (5,1)} node at (3,2.3) {$\calF$};
+        \draw node at (1, 1) {$\bcd \pmem^1$};
+        \draw node at (2.5, 1.5) {$\bcd \pmem^2$};
+        \draw node at (2.0, 0.5) {$\bcd \pmem^3$};
+        \draw[color=red] node at (1.5, 2.3) {$\bcd \bar{F}^M$};
+    \end{tikzpicture}}
+    \resizebox{0.49\textwidth}{!}{%
+    \LARGE
+    \begin{tikzpicture}
+        \draw node[anchor=west] at (-2.5, 4) {{\LARGE\hspace{0.5cm} Transformation ensembles}};
+        \draw[smooth cycle, tension=0.4, fill=white, pattern color=purple!30, 
+        pattern=north east lines, opacity=0.9] plot coordinates{(2,3) 
+        (-1.5,0) (3,-4) (7,1)} node at (5,2.8) {$\calG$};
+        \draw[smooth cycle, tension=0.4, fill=white, pattern color=brown!40, 
+        pattern=north west lines, opacity=0.9] plot coordinates{(2,2) 
+        (-0.5,0) (3,-2) (5,1)} node at (3,2.3) {$\calF$};
+        \draw node at (1, 1) {$\bcd \pmem^1$};
+        \draw node at (2.5, 0.5) {$\bcd \pmem^2$};
+        \draw node at (1.5, 0.1) {$\bcd \pmem^3$};
+        \draw[color=red] node at (1.9, 1.0) {$\bcd \bar{F}^M$};
+    \end{tikzpicture}}
+}
+\only<2>{\includegraphics[width=\textwidth]{img/trf-ens.pdf}}
+% \only<3>{%
+% <<echo=FALSE, fig.height=1.2*2.5, fig.width=1.2*3.6, out.width="70%">>=
+% set.seed(1)
+% 
+% pd <- tibble(
+	% ps = c(runif(5), 1e-5),
+	% avg = -mean(log(ps)),
+	% ens = -log(mean(ps)),
+	% trf = -log(pnorm(mean(qnorm(ps))))
+% ) 
+% 
+% pd2 <- pd %>% pivot_longer(avg:trf, names_to = "ens")
+% 
+% ggplot(pd, aes(x = "model", y = - log(ps))) +
+	% geom_jitter(width = 0.1) +
+	% geom_point(aes(y = value, color = ens), pch = 2, cex = 3, data = pd2) +
+	% theme_bw() +
+	% labs(x = element_blank(), y = "NLL", color = "Pooling") +
+	% scale_color_brewer(palette = "Dark2", labels = c(
+		% "avg" = "mean", "ens" = "linear", "trf" = "trafo")) +
+	% theme(legend.position = "right")
+% @
+% }
+\only<3>{\fbox{\includegraphics[width=0.9\textwidth]{img/trafoens.png}}}
+\end{column}
+\end{columns}
+\end{frame}
+%-------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Fit transformation ensembles in R with `deeptrafo'}
+
+1. Model formula
+<<echo=TRUE, eval=FALSE>>=
+fm <- vote_count ~ 0 + s(budget, df = 6) +  popularity + deep(texts)
+@
+
+\vspace{-0.2cm}
+\pause
+
+2. Neural network
+<<echo=TRUE, eval=FALSE>>=
+embd_mod <- function(x) x |>
+  layer_embedding(input_dim = nr_words, output_dim = embedding_size) |>
+  layer_lstm(units = 50, return_sequences = TRUE) |>
+  layer_lstm(units = 50, return_sequences = FALSE) |> layer_dropout(rate = 0.1) |>
+  layer_dense(25) |> layer_dropout(rate = 0.2) |> layer_dense(5) |>
+  layer_dropout(rate = 0.3) |> layer_dense(1)
+@
+
+\vspace{-0.2cm}
+\pause
+
+3. Set up model
+<<echo=TRUE, eval=FALSE>>=
+m <- deeptrafo(fm, data = train, list_of_deep_models = list(deep = embd_mod))
+@
+
+\vspace{-0.2cm}
+\pause
+
+4. Fit ensemble
+<<echo=TRUE, eval=FALSE>>=
+ens <- ensemble(m, n_ensemble = 3, epochs = 50, batch_size = 64)
+@
+
+\end{frame}
+%-------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile,t]{Example: Movie ratings}
+
+<<echo=FALSE>>=
+ndd <- readRDS("data/ensdat.RDS")
+@
+\begin{columns}[T]
+\begin{column}{0.6\textwidth}
+Prediction for a single movie from the test data
+\begin{itemize}
+  % \item Genre: \Sexpr{ifelse(ndd$genreAction[[1]] == 1, "action", "non-action")}
+  \item Budget: \Sexpr{round(exp(ndd$budget[[1]]) - 1)} \$
+  \item Popularity: \Sexpr{round(exp(ndd$popularity[[1]]) - 1, 2)}
+  \item Overview: ``\Sexpr{ndd$overview[[1]]}''
+\end{itemize}
+
+\pause
+
+\textbf{Test NLL:}
+
+<<echo=TRUE,eval=FALSE>>=
+unlist(logLik(ens_deep, newdata = test, 
+  convert_fun = mean))
+@
+
+\vspace{-0.75cm}
+
+<<echo=FALSE>>=
+readRDS("data/nll.RDS")
+@
+
+
+\end{column}
+\begin{column}{0.4\textwidth}
+\pause
+
+<<echo=FALSE, fig.height=3*0.8, fig.width=5*0.8, out.width="100%", fig.align='center'>>=
+ggplot(ndd %>% filter(vote_count < 3000), aes(x = vote_count)) +
+  geom_step(aes(y = preds[, 1], col = "member"), linetype = 2) +
+  geom_step(aes(y = preds[, 2], col = "member"), linetype = 2) +
+  geom_step(aes(y = preds[, 3], col = "member"), linetype = 2) +
+  geom_step(aes(y = ens, col = "ensemble"), lwd = 1.2) +
+  # geom_ribbon(aes(ymin = ensl, ymax = ensu), alpha = 0.1) +
+  labs(x = "vote count", y = "conditional trafo", color = element_blank()) +
+  scale_color_brewer(palette = "Dark2") + 
+  theme_bw() +
+  theme(legend.position = c(0.8, 0.2), legend.background = element_rect(fill = "transparent"))
+@
+
+
+<<echo=FALSE, fig.height=3*0.8, fig.width=5*0.8, out.width="100%", fig.align='center'>>=
+ggplot(ndd %>% filter(vote_count < 3000), aes(x = vote_count)) +
+  geom_step(aes(y = cdfs[, 1], col = "member"), linetype = 2) +
+  geom_step(aes(y = cdfs[, 2], col = "member"), linetype = 2) +
+  geom_step(aes(y = cdfs[, 3], col = "member"), linetype = 2) +
+  geom_step(aes(y = cdf, col = "ensemble"), lwd = 1.2) +
+  # geom_ribbon(aes(ymin = cdfl, ymax = cdfu), alpha = 0.1) +
+  labs(x = "vote count", y = "conditional CDF", color = element_blank()) +
+  scale_color_brewer(palette = "Dark2") +
+  theme_bw() +
+  theme(legend.position = c(0.8, 0.2), legend.background = element_rect(fill = "transparent"))
+@
+\end{column}
+\end{columns}
+\end{frame}
+%-------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Acknowledgements}
+
+\center
+
+\begin{columns}[T]
+\begin{column}{0.1\textwidth}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{tcolorbox}[width=0.75\textwidth]
+\textbf{PhD Advisors}
+
+Beate Sick
+
+Torsten Hothorn
+\end{tcolorbox}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{tcolorbox}[width=0.75\textwidth]
+\textbf{Collaborators}
+
+David R\"ugamer
+
+Oliver D\"urr
+
+Philipp FM Baumann
+
+Andrea G\"otschi
+\end{tcolorbox}
+\end{column}
+\end{columns}
+
+\vspace{0.5cm}
+
+\resizebox{0.8\textwidth}{!}{%
+\begin{tikzpicture}
+\node (uzh) {\includegraphics[width=0.25\textwidth]{img/uzh}};
+\node[right=0cm of uzh] (zhaw) {\includegraphics[width=0.2\textwidth]{img/zhaw}};
+\node[right=0cm of zhaw] (snf) {\includegraphics[width=0.3\textwidth]{img/snf}};
+\node[right=0cm of snf] (novartis) {\includegraphics[width=0.2\textwidth]{img/novartis}};
+\end{tikzpicture}}
+\end{frame}
+\end{document}
+%-------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{References} % [allowframebreaks]{References}
+% \footnotesize
+% \bibliographystyle{abbrvnat}
+% \bibliography{bibliography}
+% \end{frame}
+%-------------------------------------------------------------------------------
+% \section{Appendix}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}[t]{What can DCTMs be used for?}
+% \begin{columns}[T]
+% \begin{column}{0.5\textwidth}
+% \textbf{Model selection}
+% 
+% \begin{center}
+% \begin{tikzpicture}
+% \node (B) {\huge\faBalanceScale};
+% \node[below left=0cm of B] (CI) {\small $\parm(\rx, \bb)$};
+% \node[above right=0cm of B] (CS) {\small $\parm(\bb) + \linpred$};
+% \end{tikzpicture}
+% \end{center}
+% 
+% \end{column}
+% \begin{column}{0.5\textwidth}
+% \textbf{Model criticism}
+% 
+% \vspace{-0.2cm}
+% <<echo=FALSE, out.width="80%", fig.align='center'>>=
+% par(las = 1)
+% m <- BoxCox(speed | 0 + dist ~ 1, data = cars)
+% r1 <- residuals(m)
+% nd <- data.frame(dist = c(60, 70))
+% 
+% plot(m, newdata = nd, which = "distribution", type = "trafo",
+		 % xlab = "y", ylab = "h(y|x,b)", col = col2, ylim = c(-12, 4))
+% legend("topleft", c("x1", "x2"), col = col2, lwd = 2, bty = "n")
+% legend("bottomright", c("Not assuming proportional odds", "Assuming proportional odds"), 
+			 % lty = 1:2, lwd = 2, bty = "n")
+% 
+% m <- BoxCox(speed ~ dist, data = cars)
+% r2 <- residuals(m)
+% nd <- data.frame(dist = c(60, 70))
+% 
+% plot(m, newdata = nd, which = "distribution", type = "trafo",
+		 % xlab = "y", ylab = "h(y|x,b)", col = col2, ylim = c(-12, 4),
+		 % main = "Proportional odds assumed", add = TRUE, lty = 2)
+% @
+% \end{column}
+% \end{columns}
+% \begin{columns}[T]
+% \begin{column}{0.5\textwidth}
+% \textbf{Interpretation}
+% 
+% \vspace{-0.25cm}
+% <<echo=FALSE, out.width="80%", fig.align="center">>=
+% par(las = 1)
+% m <- BoxCox(speed ~ dist, data = cars, extrapolate = TRUE)
+% nd <- data.frame(dist = c(60, 70))
+% 
+% plot(m, newdata = nd, which = "distribution", type = "density",
+		 % xlab = "y", ylab = "f(y|x,b)", col = col2, K = 1e3)
+% legend("topleft", c("b", "b'"), col = col2, lwd = 2, bty = "n", ncol = 2)
+% 
+% img <- readJPEG("img/dwi.jpg")
+% img2 <- readJPEG("img/dwi2.jpg")
+% rasterImage(img2, 4.75 - 0.8, 0.09, 7.5 - 0.8, 0.14)
+% # arrows(7.7 - 0.8, 0.0825, 8.8 - 0.8, 0.0825, angle = 30, length = 0.1)
+% rasterImage(img, 9 - 1.8, 0.09, 11.75 - 1.8, 0.14)
+% @
+% % \end{column}
+% \begin{column}{0.5\textwidth}
+% \textbf{Simulation}
+% 
+% \vspace{-0.2cm}
+% <<echo=FALSE, out.width="80%", fig.align="center">>=
+% par(las = 1)
+% m <- BoxCox(speed | 0 + dist ~ 1, data = cars)
+% % nd <- data.frame(dist = c(60, 70))
+% 
+% plot(m, newdata = nd, which = "distribution", type = "distribution",
+		 % xlab = "y", ylab = "F(y|x,b)", col = col2, ylim = c(0, 1))
+% smpl <- runif(10)
+% rug(smpl, side = 2, ticksize = 0.03)
+% rug(trtf:::.R2vec(predict(m, newdata = data.frame(dist = 60), type = "quantile", p = smpl)), 
+		% side = 1, ticksize = 0.03, col = col2[1])
+% % rug(trtf:::.R2vec(predict(m, newdata = data.frame(dist = 70), type = "quantile", p = smpl)),
+		% side = 1, ticksize = 0.03, col = col2[2])
+% legend("topleft", c("x1", "x2"), col = col2, lwd = 2, bty = "n")
+% @
+% \end{column}
+% \end{columns}
+% \end{frame}
+% %-------------------------------------------------------------------------------
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{\proglang{R}~package \pkg{deeptrafo}}
+% \center
+% \begin{tikzpicture}[auto, Arr/.style={-{Latex[length=1.5mm]}}]
+% % \node at (-1, 3.25) {\textsf{A}};
+% \node[draw,circle] (x) {$\rx_{1:J}$};
+% \node[above right=1cm of x] (bx) {$\basisx(\rx_{1:J})$};
+% \node[below right=1cm of x] (ba) {$\svec(\rx_{1:J})$};
+% % \node[right=1cm of bx] (nnx) {\texttt{interacting}};
+% \node[right=1cm of ba] (nna) {\texttt{shifting}};
+% \node[below right=1cm of nnx] (trafo) {$\h(\ry \given \rx_{1:J})$};
+% \node[above=1.91of trafo.north] (ay) {$\basisy(\ry)$};
+% \node[left=2cm of ay,draw,circle] (resp) {$\ry$};
+% \node[right=1.5cm of trafo,draw] (dmlt) {\bf DCTM};
+% \node[above=1cm of dmlt] (fz) {$\pZ$};
+% \node[below=1cmof dmlt] (notes) {NLL};
+% % \draw[Arr] (resp) -- (ay);
+% \draw[Arr] (x) -- (bx.west);
+% \draw[Arr] (x) -- (bx.west);
+% \draw[Arr] (x) -- (ba.west);
+% \draw[Arr] (bx) -- (nnx.west);
+% \draw[Arr] (ba) -- (nna.west);
+% \draw[Arr] (ay) -- (trafo.north);
+% \draw[Arr] (nnx) -- node[midway, above right] {$\parm$} (trafo.north west);
+% % \draw[Arr] (nna) -- node[midway, below right] {$\shiftparm$} (trafo.south west);
+% \draw[Arr] (trafo) -- (dmlt);
+% \draw[Arr] (fz) -- (dmlt);
+% \draw[Arr] (dmlt) -- (notes.north);
+% \draw[thick,dotted] ($(nna.south west)+(-0.55,-0.20)$) rectangle ($(nnx.north east)+(2.85,+0.20)$);
+% \draw[Arr] (notes.west) -- node[midway, above] {SGD} ($(notes.west)+(-1.5, 0)$);
+% \end{tikzpicture}
+% 
+% % {\footnotesize TM: Transformation model, SGD: Stochastic gradient descent, NN: Neural network}
+% \mycite{10.48550/arXiv.2211.13665}
+% \end{frame}
+% %-------------------------------------------------------------------------------
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Parametrization of an additive transformation function}
+% \begin{center}
+% \resizebox{0.7\textwidth}{!}{
+% % \begin{tikzpicture}[auto, Arr/.style={-{Latex[length=2.5mm]}}]
+% \node (int1) {$\eparm_1$};
+% \node[below=0cm of int1] (int2) {$\eparm_2$};
+% \node[below=0cm of int2] (int3) {$\vdots$};
+% \node[below=0cm of int3] (intK) {$\eparm_K$};
+% \node[left=1cm of int2, circle, draw] (1) {1};
+% \draw[Arr] (1.east) -- (int1);
+% \draw[Arr] (1.east) -- (int2);
+% % \draw[Arr] (1.east) -- (intK);
+% \draw[thick] ($(1.north west)+(-0.5,0.9)$) rectangle ($(intK.south east)+(0.5,-0.25)$);
+% \node[below right=1cm of intK.south west] (trafo) 
+	% {$\h(\ry \given \rx, \bb) \; = \; \basisy(\ry)^\top\parm \; + \; \linpred \; + \; \eta(\bb)$};
+% \node[below=1cm of trafo] (cnn) {\includegraphics[height=2cm]{img/cnn}};
+% \node[left=0cm of cnn] (bb) {$\bb$};
+% \node[right=0cm of cnn] (eta) {$\eta(\bb)$};
+% \draw[thick] ($(cnn.north west)+(-0.5,0.25)$) rectangle ($(eta.south east)+(0.5,-0.9)$);
+% % \node[right=6cm of int1] (x1) {$x_1$};
+% \node[right=6cm of int2] (x2) {$x_2$};
+% \node[right=6.5cm of int3] (x3) {$\vdots$};
+% \node[right=6cm of intK] (xp) {$x_p$};
+% \node[right=10 of 1] (linpred) {$\linpred$};
+% \draw[Arr] (x1) -- node [midway, above] {\small $\beta_1$} (linpred.north west);
+% \draw[Arr] (x2) -- node [midway, above] {\small $\beta_2$} (linpred.west);
+% \draw[Arr] (xp) -- node [midway, above] {\small $\beta_p$} (linpred.south west);
+% % \draw[thick] ($(x1.north west)+(-0.5,0.25)$) rectangle ($(linpred.south east)+(0.5,-1.25)$);
+% \draw[Arr] ($(intK.south east)+(0.5,-0.25)$) -- ($(trafo.north)+(-0.3,-0.1)$);
+% \draw[Arr] ($(cnn.north)+(0,0.25)$) -- ($(trafo.south east)+(-0.7,0)$);
+% \draw[Arr] ($(xp.south west)+(-0.17,-0.18)$) -- ($(trafo.north)+(1.5,-0.00)$);
+% \end{tikzpicture}}
+% \end{center}
+% \end{frame}
+% %-------------------------------------------------------------------------------
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}[t]{\faDashboard \; Interpretability \quad \quad \faDashboard \; Flexibility: \quad Choosing $\; h$}
+% \begin{columns}[T]
+% \begin{column}{0.3\textwidth}
+% ``Nonparametric''
+	% $$\basisy(\ry)^\top\parm(\rx, \bb)$$
+% <<echo=FALSE, fig.height=4, fig.width=4>>=
+% par(las = 1)
+% % m <- BoxCox(speed | 0 + dist ~ 1, data = cars)
+% nd <- data.frame(dist = c(40, 50))
+% 
+% plot(m, newdata = nd, which = "distribution", type = "trafo",
+		 % xlab = "y", ylab = "h(y|x,b)", col = col2)
+% legend("topleft", c("x1", "x2"), col = col2, lwd = 2, bty = "n")
+% legend("bottomright", "b is fixed", bty = "n")
+% @
+% % \center
+% CI$_{\rx,\bb}$
+% \end{column}
+% \pause
+% \begin{column}{0.3\textwidth}
+% Additive
+	% $$\basisy(\ry)^\top\parm(\bb) + \beta(\rx)$$
+% <<echo=FALSE, fig.height=4, fig.width=4>>=
+% % par(las = 1)
+% cars$dist2 <- c(scale(cars$dist)^2)
+% m <- BoxCox(speed ~ dist2, data = cars)
+% nd <- data.frame(dist2 = c(40, 50))
+% 
+% plot(m, newdata = nd, which = "distribution", type = "trafo",
+		 % xlab = "y", ylab = "h(y|x,b)", col = col2)
+% legend("topleft", c("x1", "x2"), col = col2, lwd = 2, bty = "n")
+% % legend("bottomright", "b is fixed", bty = "n")
+% @
+% \center
+% CI$_{\bb}$-CS$_{\rx}$
+% \end{column}
+% \pause
+% \begin{column}{0.3\textwidth}
+% Additive linear
+	% % $$\basisy(\ry)^\top\parm + \eta(\bb) + \rx^\top\shiftparm$$
+% <<echo=FALSE, fig.height=4, fig.width=4>>=
+% par(las = 1)
+% m <- BoxCox(speed ~ dist, data = cars)
+% nd <- data.frame(dist = c(40, 50))
+% 
+% plot(m, newdata = nd, which = "distribution", type = "trafo",
+		 % xlab = "y", ylab = "h(y|x,b)", col = col2)
+% % legend("topleft", c("x1, b1", "x2, b2"), col = col2, lwd = 2, bty = "n")
+% @
+% \center
+% SI-CS$_\bb$-LS$_{\rx}$
+% \end{column}
+% \end{columns}
+% \end{frame}
+% %-------------------------------------------------------------------------------
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Interpretable machine learning}
+% \textbf{Prediction:} Flexible estimate of, \eg the conditional mean
+% $$\Ex[\rY \given \rX = \rx] =: f(\rx)$$
+% 
+% \pause
+% 
+% \textbf{Interpretability:} Human comprehensible function on a meaningful scale, \eg
+% % \begin{align*}
+% f(\rx) :=
+% \begin{cases}
+	% \rx^\top\shiftparm & \mbox{additive linear} \\
+	% f(x_1, \dots, x_{q \ll p}) & \mbox{sparse} \\
+	% \sum_{j = 1}^{J} f_j(x_j) & \mbox{structured additive}
+% \end{cases}
+% \end{align*}
+% % 
+% \end{frame}
+% %-------------------------------------------------------------------------------
+% \end{document}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{}
+% 
+% \end{frame}
+% % %-------------------------------------------------------------------------------
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{}
+% 
+% \end{frame}
+% %-------------------------------------------------------------------------------
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{}
+% % \begin{columns}
+% \begin{column}{0.5\textwidth}
+% \end{column}
+% \begin{column}{0.5\textwidth}
+% \end{column}
+% \end{columns}
+% \end{frame}
+% %-------------------------------------------------------------------------------
+% % 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Application: Movie ratings}
+% \begin{columns}
+% \begin{column}{0.6\textwidth}
+% \begin{itemize}
+	% \item Response: Vote count
+	% \item Tabular: Genre, budget, popularity
+	% % \item Text: Movie reviews
+% \end{itemize}
+% \end{column}
+% \begin{column}{0.4\textwidth}
+% \end{column}
+% \end{columns}
+% \end{frame}
+% % % % %-------------------------------------------------------------------------------
