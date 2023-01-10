@@ -3,6 +3,5 @@ title: "Talks"
 ---
 
 ```{r echo=FALSE, results='asis'}
-biblio <- bibtex::read.bib("talks.bib")
-sort(biblio, decreasing = TRUE)
+bibtex::read.bib("talks.bib")
 ```

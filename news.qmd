@@ -1,0 +1,7 @@
+---
+title: "News"
+---
+
+* New preprint: ["Estimating Conditional Distributions with Neural Networks using 
+R package deeptrafo"](https://doi.org/10.48550/arXiv.2211.13665) with 
+[software](https://cran.r-project.org/package=deeptrafo) available on CRAN

@@ -17,3 +17,8 @@ Welcome to my academic personal website!
 
 ```
 
+## News
+
+```{r child="news.qmd"}
+
+```
