@@ -7,7 +7,3 @@ jointly by Professors Beate Sick and Torsten Hothorn. My research interests are
 combining distributional regression models with deep learning approaches and
 causal inference to improve treatment decisions for acute ischemic stroke
 patients.
-
-Thank you for visiting my website, and please feel free to explore and learn 
-more about my research. You can reach out to me via
-[Twitter](https://twitter.com/kook_lucas) or email.

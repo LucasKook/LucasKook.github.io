@@ -12,6 +12,7 @@ website:
       - software.qmd
       - talks.qmd
       - cv.qmd
+      - contact.qmd
 
 format:
   html:
