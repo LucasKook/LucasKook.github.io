@@ -2,14 +2,13 @@
 title: "Curriculum Vitae"
 ---
 
-Education
-======
+## Education
+
 * Ph.D in Biostatistics, University of Zurich, 03/2020--02/2023 (expected)
 * M.S. in Biostatistics, University of Zurich, Switzerland, 09/2018--02/2020
 * B.S. in Molecular Medicine, University of Freiburg, Germany, 10/2015--06/2018
 
-Work experience
-======
+## Work experience
 
 * 09/2022--present Junior editor
   * Journal of Statistical Software
@@ -30,8 +29,8 @@ Work experience
   * University of Freiburg
   * Supervisor: Prof. Oliver Schilling
 
-Teaching Experience
-======
+## Teaching Experience
+
 * Student supervision
   * 3 Master students at UZH/ETHZ
 
@@ -43,14 +42,14 @@ Teaching Experience
 
 * Introductory practical in physical chemistry for molecular medicine (ALU, SS18)
 
-Awards and Scholarships
-======
+## Awards and Scholarships
+
 * 12/2021: GRC Travel Grant (Unviersity of Copenhagen, Host: Prof. Jonas Peters)
 * 2015--2020: Full scholarship of the Academic Foundation of the German People
 * 2015--2020: Full scholarship of the Lion's Club Viersen e.V.
   
-Software
-======
+## Software
+
 * Programming languages
   * R, Bash, Julia, Python
 
@@ -63,21 +62,19 @@ Software
   * [<bf>prora</bf>](https://protviz.github.io/prora/)
   * [<bf>tramnet</bf>](https://cran.r-project.org/package=tramnet)
 
-Languages
-======
+## Languages
+
 * English (Full professional proficiency)
 * German (Native proficiency)
 * French (Basic knowledge)
 
-Publications
-============
+## Publications
 
 ```{r child="publications.qmd"}
 
 ```
 
-Talks
-=====
+## Talks
 
 ```{r child="talks.qmd"}
 
