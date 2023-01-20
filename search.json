@@ -81,7 +81,7 @@
     "href": "about.html",
     "title": "About me",
     "section": "",
-    "text": "Thank you for visiting my website, and please feel free to explore and learn more about my research. You can reach out to me via Twitter or email."
+    "text": "I am a PhD student in biostatistics at the University of Zurich supervised jointly by Professors Beate Sick and Torsten Hothorn. My research interests are combining distributional regression models with deep learning approaches and causal inference to improve treatment decisions for acute ischemic stroke patients."
   },
   {
     "objectID": "index.html#news",
@@ -89,6 +89,13 @@
     "title": "Lucas Kook",
     "section": "News",
     "text": "News\n\nNew preprint: “Estimating Conditional Distributions with Neural Networks using R package deeptrafo” with software available on CRAN"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Address\nLucas Kook\nEpidemiology, Biostatistics, & Prevention Institute\nUniversity of Zurich\nHirschengraben 84\nCH-8001 Zurich"
   },
   {
     "objectID": "publications.html",
