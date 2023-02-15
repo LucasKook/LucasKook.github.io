@@ -4,14 +4,14 @@
     "href": "cv.html",
     "title": "Curriculum Vitae",
     "section": "",
-    "text": "Ph.D in Biostatistics, University of Zurich, 03/2020–02/2023 (expected)\nM.S. in Biostatistics, University of Zurich, Switzerland, 09/2018–02/2020\nB.S. in Molecular Medicine, University of Freiburg, Germany, 10/2015–06/2018"
+    "text": "Ph.D in Biostatistics, University of Zurich, 03/2020–02/2023\nM.S. in Biostatistics, University of Zurich, Switzerland, 09/2018–02/2020\nB.S. in Molecular Medicine, University of Freiburg, Germany, 10/2015–06/2018"
   },
   {
     "objectID": "cv.html#work-experience",
     "href": "cv.html#work-experience",
     "title": "Curriculum Vitae",
     "section": "Work experience",
-    "text": "Work experience\n\n09/2022–present Junior editor\n\nJournal of Statistical Software\n\n04/2022–07/2022 Visiting PhD student\n\nUniversity of Copenhagen\nSupervisor: Prof. Jonas Peters\n\n03/2020–present: PhD candidate in computational biostatistics\n\nUniversity of Zurich, Zurich University of Applied Sciences\nSupervisor: Prof. Beate Sick, Prof. Torsten Hothorn\n\n11/2018–08/2019: Research assistant\n\nFunctional Genomics Center Zurich, University of Zurich, ETH Zurich\nSupervisor: Dr. Witold Wolski\n\n01/2017–08/2018: Research assistant\n\nUniversity of Freiburg\nSupervisor: Prof. Oliver Schilling"
+    "text": "Work experience\n\n03/2022–present Postdoctoral researcher\n\nUniversity of Copenhagen\nCollaborators: Prof. Niklas Pfister, Prof. Jonas Peters\nFunded by postdoctoral mobility grant from the Swiss National Science Foundation\n\n09/2022–present Junior editor\n\nJournal of Statistical Software\n\n04/2022–07/2022 Visiting PhD student\n\nUniversity of Copenhagen\nSupervisor: Prof. Jonas Peters\n\n03/2020–02/2023: PhD candidate in computational biostatistics\n\nUniversity of Zurich, Zurich University of Applied Sciences\nSupervisor: Prof. Beate Sick, Prof. Torsten Hothorn\n\n11/2018–08/2019: Research assistant\n\nFunctional Genomics Center Zurich, University of Zurich, ETH Zurich\nSupervisor: Dr. Witold Wolski\n\n01/2017–08/2018: Research assistant\n\nUniversity of Freiburg\nSupervisor: Prof. Oliver Schilling"
   },
   {
     "objectID": "cv.html#teaching-experience",
@@ -60,7 +60,7 @@
     "href": "news.html",
     "title": "News",
     "section": "",
-    "text": "New preprint: “Estimating Conditional Distributions with Neural Networks using R package deeptrafo” with software available on CRAN"
+    "text": "I acquired a postdoctoral mobility grant from the Swiss National Science Foundation. During the first year of the fellowship, I will be working with Niklas Pfister and Jonas Peters at the University of Copenhagen, starting March 2023.\nI succesfully defended my PhD thesis titled “Deep Learning and Causal Inference with Transformation Models” on February 8, 2023.\nNew preprint: “Estimating Conditional Distributions with Neural Networks using R package deeptrafo” with software available on CRAN"
   },
   {
     "objectID": "talks.html",
@@ -81,14 +81,14 @@
     "href": "about.html",
     "title": "About me",
     "section": "",
-    "text": "I am a PhD student in biostatistics at the University of Zurich supervised jointly by Professors Beate Sick and Torsten Hothorn. My research interests are combining distributional regression models with deep learning approaches and causal inference to improve treatment decisions for acute ischemic stroke patients."
+    "text": "I am currently a postdoctoral researcher in statistics and causal inference at the Copenhagen Causality Lab. Together with Niklas Pfister and Jonas Peters, I work at the intersection of distributional regression and causal inference with a focus on biomedical applications. Recently, I finished my PhD at the University of Zurich under the supervision of Beate Sick and Torsten Hothorn. My PhD research focused on combining distributional regression models with deep learning approaches and causal inference to improve treatment decisions for acute ischemic stroke patients."
   },
   {
     "objectID": "index.html#news",
     "href": "index.html#news",
     "title": "Lucas Kook",
     "section": "News",
-    "text": "News\n\nNew preprint: “Estimating Conditional Distributions with Neural Networks using R package deeptrafo” with software available on CRAN"
+    "text": "News\n\nI acquired a postdoctoral mobility grant from the Swiss National Science Foundation. During the first year of the fellowship, I will be working with Niklas Pfister and Jonas Peters at the University of Copenhagen, starting March 2023.\nI succesfully defended my PhD thesis titled “Deep Learning and Causal Inference with Transformation Models” on February 8, 2023.\nNew preprint: “Estimating Conditional Distributions with Neural Networks using R package deeptrafo” with software available on CRAN"
   },
   {
     "objectID": "contact.html",
