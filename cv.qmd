@@ -4,11 +4,16 @@ title: "Curriculum Vitae"
 
 ## Education
 
-* Ph.D in Biostatistics, University of Zurich, 03/2020--02/2023 (expected)
+* Ph.D in Biostatistics, University of Zurich, 03/2020--02/2023
 * M.S. in Biostatistics, University of Zurich, Switzerland, 09/2018--02/2020
 * B.S. in Molecular Medicine, University of Freiburg, Germany, 10/2015--06/2018
 
 ## Work experience
+
+* 03/2022--present Postdoctoral researcher 
+  * University of Copenhagen
+  * Collaborators: Prof. Niklas Pfister, Prof. Jonas Peters
+  * Funded by postdoctoral mobility grant from the Swiss National Science Foundation
 
 * 09/2022--present Junior editor
   * Journal of Statistical Software
@@ -17,7 +22,7 @@ title: "Curriculum Vitae"
   * University of Copenhagen
   * Supervisor: Prof. Jonas Peters
 
-* 03/2020--present: PhD candidate in computational biostatistics
+* 03/2020--02/2023: PhD candidate in computational biostatistics
   * University of Zurich, Zurich University of Applied Sciences
   * Supervisor: Prof. Beate Sick, Prof. Torsten Hothorn
 
