@@ -15,7 +15,7 @@ title: "Curriculum Vitae"
   * Collaborators: Prof. Niklas Pfister, Prof. Jonas Peters
   * Funded by postdoctoral mobility grant from the Swiss National Science Foundation
 
-* 09/2022--present Junior editor
+* 09/2022--02/2023 Junior editor
   * Journal of Statistical Software
 
 * 04/2022--07/2022 Visiting PhD student
@@ -46,6 +46,10 @@ title: "Curriculum Vitae"
 * STA402/MAT924 Likelihood inference (UZH, FS19)
 
 * Introductory practical in physical chemistry for molecular medicine (ALU, SS18)
+
+## Editorial responsibilities
+
+* 09/2022--present: Junior editor for the [Journal of Statistical Software](https://www.jstatsoft.org/about/editorialTeam)
 
 ## Awards and Scholarships
 
