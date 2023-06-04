@@ -13,10 +13,8 @@ title: "Curriculum Vitae"
 * 03/2022--present Postdoctoral researcher 
   * University of Copenhagen
   * Collaborators: Prof. Niklas Pfister, Prof. Jonas Peters
-  * Funded by postdoctoral mobility grant from the Swiss National Science Foundation
-
-* 09/2022--02/2023 Junior editor
-  * Journal of Statistical Software
+  * Funded by a ``Postdoc.Mobility'' grant from the Swiss National Science
+    Foundation
 
 * 04/2022--07/2022 Visiting PhD student
   * University of Copenhagen
