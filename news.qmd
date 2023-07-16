@@ -3,7 +3,9 @@ title: "News"
 ---
 
 * I acquired a postdoctoral mobility grant from the Swiss National Science
-Foundation. During the first year of the fellowship, I will be working with
+Foundation for my proposal on [Distributional Instrumental Variables Estimation 
+(DIVE)](https://data.snf.ch/grants/grant/214457).
+During the first year of the fellowship, I will be working with
 [Niklas Pfister](https://niklaspfister.github.io/) and [Jonas
 Peters](http://web.math.ku.dk/~peters/) at the University of Copenhagen,
 starting March 2023.
