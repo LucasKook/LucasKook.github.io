@@ -11,14 +11,14 @@
     "href": "cv.html#work-experience",
     "title": "Curriculum Vitae",
     "section": "Work experience",
-    "text": "Work experience\n\n03/2022–present Postdoctoral researcher\n\nUniversity of Copenhagen\nCollaborators: Prof. Niklas Pfister, Prof. Jonas Peters\nFunded by a ``Postdoc.Mobility’’ grant from the Swiss National Science Foundation\n\n04/2022–07/2022 Visiting PhD student\n\nUniversity of Copenhagen\nSupervisor: Prof. Jonas Peters\n\n03/2020–02/2023: PhD candidate in computational biostatistics\n\nUniversity of Zurich, Zurich University of Applied Sciences\nSupervisor: Prof. Beate Sick, Prof. Torsten Hothorn\n\n11/2018–08/2019: Research assistant\n\nFunctional Genomics Center Zurich, University of Zurich, ETH Zurich\nSupervisor: Dr. Witold Wolski\n\n01/2017–08/2018: Research assistant\n\nUniversity of Freiburg\nSupervisor: Prof. Oliver Schilling"
+    "text": "Work experience\n\n03/2022–present Postdoctoral researcher\n\nUniversity of Copenhagen\nCollaborators: Prof. Niklas Pfister, Prof. Jonas Peters\nFunded by a ``Postdoc.Mobility’’ grant from the Swiss National Science Foundation on Distributional Instrumental Variables Estimation (DIVE)\n\n04/2022–07/2022 Visiting PhD student\n\nUniversity of Copenhagen\nSupervisor: Prof. Jonas Peters\n\n03/2020–02/2023: PhD candidate in Biostatistics\n\nUniversity of Zurich, Zurich University of Applied Sciences\nSupervisors: Prof. Beate Sick, Prof. Torsten Hothorn\n\n11/2018–08/2019: Research assistant\n\nFunctional Genomics Center Zurich, University of Zurich, ETH Zurich\nSupervisor: Dr. Witold Wolski\n\n01/2017–08/2018: Research assistant\n\nUniversity of Freiburg\nSupervisor: Prof. Oliver Schilling"
   },
   {
     "objectID": "cv.html#teaching-experience",
     "href": "cv.html#teaching-experience",
     "title": "Curriculum Vitae",
     "section": "Teaching Experience",
-    "text": "Teaching Experience\n\nStudent supervision\n\n3 Master students at UZH/ETHZ\n\nSTA406 Generalized Regression (UZH, FS19/20/21)\nSTA408 Statistical methods in epidemiology (UZH, SS20)\nSTA402/MAT924 Likelihood inference (UZH, FS19)\nIntroductory practical in physical chemistry for molecular medicine (ALU, SS18)"
+    "text": "Teaching Experience\n\nStudent supervision: I co-supervised 3 MSc students at UZH/ETHZ\nSTA406 Generalized Regression (UZH, FS19/20/21)\nSTA408 Statistical methods in epidemiology (UZH, SS20)\nSTA402/MAT924 Likelihood inference (UZH, FS19)\nIntroductory practical in physical chemistry for molecular medicine (ALU, SS18)"
   },
   {
     "objectID": "cv.html#editorial-responsibilities",
@@ -26,6 +26,13 @@
     "title": "Curriculum Vitae",
     "section": "Editorial responsibilities",
     "text": "Editorial responsibilities\n\n09/2022–present: Junior editor for the Journal of Statistical Software"
+  },
+  {
+    "objectID": "cv.html#peer-review",
+    "href": "cv.html#peer-review",
+    "title": "Curriculum Vitae",
+    "section": "Peer review",
+    "text": "Peer review\n\nStatistical Methods in Medical Research\nJournal of Computational and Graphical Statistics"
   },
   {
     "objectID": "cv.html#awards-and-scholarships",
@@ -67,7 +74,7 @@
     "href": "news.html",
     "title": "News",
     "section": "",
-    "text": "I acquired a postdoctoral mobility grant from the Swiss National Science Foundation. During the first year of the fellowship, I will be working with Niklas Pfister and Jonas Peters at the University of Copenhagen, starting March 2023.\nI succesfully defended my PhD thesis titled “Deep Learning and Causal Inference with Transformation Models” on February 8, 2023.\nNew preprint: “Estimating Conditional Distributions with Neural Networks using R package deeptrafo” with software available on CRAN"
+    "text": "I acquired a postdoctoral mobility grant from the Swiss National Science Foundation for my proposal on Distributional Instrumental Variables Estimation (DIVE). During the first year of the fellowship, I will be working with Niklas Pfister and Jonas Peters at the University of Copenhagen, starting March 2023.\nI succesfully defended my PhD thesis titled “Deep Learning and Causal Inference with Transformation Models” on February 8, 2023.\nNew preprint: “Estimating Conditional Distributions with Neural Networks using R package deeptrafo” with software available on CRAN"
   },
   {
     "objectID": "talks.html",
@@ -95,7 +102,7 @@
     "href": "index.html#news",
     "title": "Lucas Kook",
     "section": "News",
-    "text": "News\n\nI acquired a postdoctoral mobility grant from the Swiss National Science Foundation. During the first year of the fellowship, I will be working with Niklas Pfister and Jonas Peters at the University of Copenhagen, starting March 2023.\nI succesfully defended my PhD thesis titled “Deep Learning and Causal Inference with Transformation Models” on February 8, 2023.\nNew preprint: “Estimating Conditional Distributions with Neural Networks using R package deeptrafo” with software available on CRAN"
+    "text": "News\n\nI acquired a postdoctoral mobility grant from the Swiss National Science Foundation for my proposal on Distributional Instrumental Variables Estimation (DIVE). During the first year of the fellowship, I will be working with Niklas Pfister and Jonas Peters at the University of Copenhagen, starting March 2023.\nI succesfully defended my PhD thesis titled “Deep Learning and Causal Inference with Transformation Models” on February 8, 2023.\nNew preprint: “Estimating Conditional Distributions with Neural Networks using R package deeptrafo” with software available on CRAN"
   },
   {
     "objectID": "contact.html",
