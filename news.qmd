@@ -2,12 +2,18 @@
 title: "News"
 ---
 
+* New preprint: ["Model-based causal feature selection for general response
+types"](https://doi.org/10.48550/arXiv.2309.12833) in collaboration with
+Sorawit Saengkyongam, Anton Rask Lundborg, Torsten Hothorn and Jonas Peters.
+Software implementing our method is available as an R package ([`tramicp` on
+GitHub](https://github.com/LucasKook/tramicp)).
+
 * I acquired a postdoctoral mobility grant from the Swiss National Science
 Foundation for my proposal on [Distributional Instrumental Variables Estimation 
 (DIVE)](https://data.snf.ch/grants/grant/214457).
 During the first year of the fellowship, I will be working with
 [Niklas Pfister](https://niklaspfister.github.io/) and [Jonas
-Peters](http://web.math.ku.dk/~peters/) at the University of Copenhagen,
+Peters](https://people.math.ethz.ch/~jopeters/) at the University of Copenhagen,
 starting March 2023.
 
 * I succesfully defended my PhD thesis titled "Deep Learning and Causal
