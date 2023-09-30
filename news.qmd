@@ -5,8 +5,9 @@ title: "News"
 * New preprint: ["Model-based causal feature selection for general response
 types"](https://doi.org/10.48550/arXiv.2309.12833) in collaboration with
 Sorawit Saengkyongam, Anton Rask Lundborg, Torsten Hothorn and Jonas Peters.
-Software implementing our method is available as an R package ([`tramicp` on
-GitHub](https://github.com/LucasKook/tramicp)).
+Software implementing our method is available as an R package (`tramicp` [on
+GitHub](https://github.com/LucasKook/tramicp) and 
+[on CRAN](https://CRAN.R-project.org/package=tramicp)).
 
 * I acquired a postdoctoral mobility grant from the Swiss National Science
 Foundation for my proposal on [Distributional Instrumental Variables Estimation 
