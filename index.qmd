@@ -9,8 +9,6 @@ knitr::include_graphics("img/profile-modified.png")
 Lucas Kook
 ==========
 
-Welcome to my academic personal website!
-
 ```{r child="about.qmd"}
 
 ```

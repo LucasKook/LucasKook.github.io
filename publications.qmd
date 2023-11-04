@@ -2,6 +2,22 @@
 title: "Publications"
 ---
 
+My publications are also index on [my Google Scholar profile](https://scholar.google.com/citations?hl=en&user=mkbueQkAAAAJ&view_op=list_works&sortby=pubdate&inst=13856427432203950092).
+
+### Preprints
+
 ```{r echo=FALSE, results='asis'}
-bibtex::read.bib("publications.bib")
+bibtex::read.bib("preprints.bib")
+```
+
+### Methodology
+
+```{r echo=FALSE, results='asis'}
+bibtex::read.bib("methodology.bib")
+```
+
+### Biomedical applications
+
+```{r echo=FALSE, results='asis'}
+bibtex::read.bib("applied.bib")
 ```
