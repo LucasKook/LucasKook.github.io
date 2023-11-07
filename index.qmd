@@ -2,16 +2,21 @@
 title: ""
 ---
 
-```{r echo=FALSE, out.width="50%", fig.align='center'}
-knitr::include_graphics("img/profile-modified.png")
-```
-
 Lucas Kook
 ==========
 
+::: columns
+::: {.column width="60%"}
 ```{r child="about.qmd"}
 
 ```
+:::
+::: {.column width="40%"}
+```{r echo=FALSE, out.width="90%", fig.align='center'}
+knitr::include_graphics("img/profile-modified.png")
+```
+:::
+:::
 
 ## News
 

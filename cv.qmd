@@ -13,7 +13,7 @@ title: "Curriculum Vitae"
 * 03/2022--present Postdoctoral researcher 
   * University of Copenhagen
   * Collaborators: Prof. Niklas Pfister, Prof. Jonas Peters
-  * Funded by a ``Postdoc.Mobility'' grant from the Swiss National Science
+  * Funded by a "Postdoc.Mobility" grant from the Swiss National Science
     Foundation on [Distributional Instrumental Variables Estimation (DIVE)](https://data.snf.ch/grants/grant/214457)
 
 * 04/2022--07/2022 Visiting PhD student
