@@ -2,6 +2,16 @@
 title: "Software"
 ---
 
+For more projects, check out [my GitHub profile](https://github.com/LucasKook).
+
+### Maintained R packages
+
 ```{r echo=FALSE, results='asis'}
 bibtex::read.bib("software.bib")
+```
+
+### Contributed R packages
+
+```{r echo=FALSE, results='asis'}
+bibtex::read.bib("contributed.bib")
 ```

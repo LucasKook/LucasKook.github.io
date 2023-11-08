@@ -59,6 +59,12 @@ title: "Curriculum Vitae"
 * 2015--2020: Full scholarship of the Academic Foundation of the German People
 * 2015--2020: Full scholarship of the Lion's Club Viersen e.V.
   
+## Languages
+
+* English (Full professional proficiency)
+* German (Native proficiency)
+* French (Basic knowledge)
+
 ## Software
 
 * Programming languages
@@ -67,17 +73,9 @@ title: "Curriculum Vitae"
 * Miscellaneous
   * Git, SVN, make, LaTeX, knitr, Docker
 
-* Contributed R packages
-  * [<bf>tramvs</bf>](https://r-forge.r-project.org/R/?group_id=1322)
-  * [<bf>deepregression</bf>](https://cran.r-project.org/package=deepregression)
-  * [<bf>prora</bf>](https://protviz.github.io/prora/)
-  * [<bf>tramnet</bf>](https://cran.r-project.org/package=tramnet)
+```{r child="software.qmd"}
 
-## Languages
-
-* English (Full professional proficiency)
-* German (Native proficiency)
-* French (Basic knowledge)
+```
 
 ## Publications
 

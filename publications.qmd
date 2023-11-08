@@ -16,7 +16,7 @@ bibtex::read.bib("preprints.bib")
 bibtex::read.bib("methodology.bib")
 ```
 
-### Biomedical applications
+### Biomedicine
 
 ```{r echo=FALSE, results='asis'}
 bibtex::read.bib("applied.bib")
