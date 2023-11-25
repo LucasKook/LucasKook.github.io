@@ -10,7 +10,7 @@ title: "Curriculum Vitae"
 
 ## Work experience
 
-* 03/2022--present Postdoctoral researcher 
+* 03/2023--present Postdoctoral researcher 
   * University of Copenhagen
   * Collaborators: Prof. Niklas Pfister, Prof. Jonas Peters
   * Funded by a "Postdoc.Mobility" grant from the Swiss National Science
