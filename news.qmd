@@ -2,6 +2,10 @@
 title: "News"
 ---
 
+* In March 2024, I will start my new role as assistant professor of statistics
+at the Institute for Statistics and Mathematics of the Vienna University for
+Economics and Business.
+
 * New preprint: ["Model-based causal feature selection for general response
 types"](https://doi.org/10.48550/arXiv.2309.12833) in collaboration with
 Sorawit Saengkyongam, Anton Rask Lundborg, Torsten Hothorn and Jonas Peters.
@@ -12,7 +16,7 @@ GitHub](https://github.com/LucasKook/tramicp) and
 * I acquired a postdoctoral mobility grant from the Swiss National Science
 Foundation for my proposal on [Distributional Instrumental Variables Estimation 
 (DIVE)](https://data.snf.ch/grants/grant/214457).
-During the first year of the fellowship, I will be working with
+During the of the fellowship, I will be working with
 [Niklas Pfister](https://niklaspfister.github.io/) and [Jonas
 Peters](https://people.math.ethz.ch/~jopeters/) at the University of Copenhagen,
 starting March 2023.
