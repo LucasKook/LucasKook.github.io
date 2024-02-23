@@ -1,5 +1,6 @@
 ---
 title: "About me"
+from: markdown+emoji
 ---
 
 I am currently a postdoctoral researcher in statistics and causal inference at

@@ -1,16 +1,23 @@
 ---
 title: "News"
+from: markdown+emoji
 ---
+
+* New preprint :tada: ["Algorithm-agnostic significance testing in supervised 
+learning with multimodal data"](https://arxiv.org/abs/2402.14416) in 
+collaboration with [Anton Rask Lundborg](https://www.arlundborg.com). The 
+corresponding `comets` R package is available on 
+[GitHub](https://github.com/LucasKook/comets.git).
 
 * In March 2024, I will start my new role as assistant professor of statistics
 at the Institute for Statistics and Mathematics of the Vienna University for
 Economics and Business.
 
-* New preprint: ["Model-based causal feature selection for general response
-types"](https://doi.org/10.48550/arXiv.2309.12833) in collaboration with
-Sorawit Saengkyongam, Anton Rask Lundborg, Torsten Hothorn and Jonas Peters.
-Software implementing our method is available as an R package (`tramicp` [on
-GitHub](https://github.com/LucasKook/tramicp) and 
+* New preprint :tada: ["Model-based causal feature selection for general 
+response types"](https://doi.org/10.48550/arXiv.2309.12833) in collaboration 
+with Sorawit Saengkyongam, Anton Rask Lundborg, Torsten Hothorn and Jonas 
+Peters. Software implementing our method is available as an R package (`tramicp` 
+[on GitHub](https://github.com/LucasKook/tramicp) and 
 [on CRAN](https://CRAN.R-project.org/package=tramicp)).
 
 * I acquired a postdoctoral mobility grant from the Swiss National Science
@@ -24,7 +31,7 @@ starting March 2023.
 * I successfully defended my PhD thesis titled "Deep Learning and Causal
 Inference with Transformation Models" on February 8, 2023.
 
-* New preprint: ["Estimating Conditional Distributions with Neural Networks using 
-R package deeptrafo"](https://doi.org/10.48550/arXiv.2211.13665) with 
-[software](https://cran.r-project.org/package=deeptrafo) available on CRAN
+* New preprint :tada: ["Estimating Conditional Distributions with Neural 
+Networks using R package deeptrafo"](https://doi.org/10.48550/arXiv.2211.13665)
+with [software](https://cran.r-project.org/package=deeptrafo) available on CRAN.
 
