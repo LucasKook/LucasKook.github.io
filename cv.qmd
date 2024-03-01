@@ -10,11 +10,15 @@ title: "Curriculum Vitae"
 
 ## Work experience
 
-* 03/2023--present Postdoctoral researcher 
+* 03/2024--present Assistant professor
+  * Vienna University of Economics and Business
+
+* 03/2023--02/2024 Postdoctoral researcher 
   * University of Copenhagen
   * Collaborators: Prof. Niklas Pfister, Prof. Jonas Peters
   * Funded by a "Postdoc.Mobility" grant from the Swiss National Science
-    Foundation on [Distributional Instrumental Variables Estimation (DIVE)](https://data.snf.ch/grants/grant/214457)
+    Foundation on [Distributional Instrumental Variables Estimation
+    (DIVE)](https://data.snf.ch/grants/grant/214457)
 
 * 04/2022--07/2022 Visiting PhD student
   * University of Copenhagen

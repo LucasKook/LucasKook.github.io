@@ -3,17 +3,17 @@ title: "About me"
 from: markdown+emoji
 ---
 
-I am currently a postdoctoral researcher in statistics and causal inference at
-the [Copenhagen Causality Lab](https://cocala.github.io/). Together with [Niklas
-Pfister](https://niklaspfister.github.io) and [Jonas 
-Peters](http://web.math.ku.dk/~peters/), I work at the intersection of 
+I am an assistant professor of statistics at the Vienna University of Economics
+and Business. Before, I worked as a postdoctoral researcher in statistics and
+causal inference at the [Copenhagen Causality Lab](https://cocala.github.io/).
+Together with [Niklas Pfister](https://niklaspfister.github.io) and [Jonas
+Peters](http://web.math.ku.dk/~peters/), I work at the intersection of
 distributional regression and causal inference with a focus on biomedical
 applications. 
 
-In February 2023, I finished my PhD at the University of Zurich under the 
-supervision of [Beate 
+I did my PhD at the University of Zurich under the supervision of [Beate
 Sick](https://www.ebpi.uzh.ch/en/aboutus/departments/biostatistics/teambiostats/sick.html)
-and [Torsten Hothorn](http://user.math.uzh.ch/hothorn/). My PhD research focused 
-on combining distributional regression models with deep learning approaches and 
-causal inference to improve treatment decisions for acute ischemic stroke 
+and [Torsten Hothorn](http://user.math.uzh.ch/hothorn/). My PhD research focused
+on combining distributional regression models with deep learning approaches and
+causal inference to improve treatment decisions for acute ischemic stroke
 patients.
