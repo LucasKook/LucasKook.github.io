@@ -11,7 +11,7 @@ Economics and Business.
 learning with multimodal data"](https://arxiv.org/abs/2402.14416) in 
 collaboration with [Anton Rask Lundborg](https://www.arlundborg.com). The 
 corresponding `comets` R package is available on 
-[GitHub](https://github.com/LucasKook/comets.git).
+[GitHub](https://github.com/LucasKook/comets.git) and [CRAN](https://CRAN.R-project.org/package=comets).
 
 * New preprint :tada: ["Model-based causal feature selection for general 
 response types"](https://doi.org/10.48550/arXiv.2309.12833) in collaboration 
@@ -32,5 +32,5 @@ Inference with Transformation Models" in February 2023.
 
 * New preprint :tada: ["Estimating Conditional Distributions with Neural 
 Networks using R package deeptrafo"](https://doi.org/10.48550/arXiv.2211.13665)
-with [software](https://cran.r-project.org/package=deeptrafo) available on CRAN.
+with [software](https://CRAN.R-project.org/package=deeptrafo) available on CRAN.
 
