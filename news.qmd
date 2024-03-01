@@ -3,15 +3,15 @@ title: "News"
 from: markdown+emoji
 ---
 
+* In March 2024, I started my new role as assistant professor of statistics
+at the Institute for Statistics and Mathematics of the Vienna University for
+Economics and Business.
+
 * New preprint :tada: ["Algorithm-agnostic significance testing in supervised 
 learning with multimodal data"](https://arxiv.org/abs/2402.14416) in 
 collaboration with [Anton Rask Lundborg](https://www.arlundborg.com). The 
 corresponding `comets` R package is available on 
 [GitHub](https://github.com/LucasKook/comets.git).
-
-* In March 2024, I will start my new role as assistant professor of statistics
-at the Institute for Statistics and Mathematics of the Vienna University for
-Economics and Business.
 
 * New preprint :tada: ["Model-based causal feature selection for general 
 response types"](https://doi.org/10.48550/arXiv.2309.12833) in collaboration 
