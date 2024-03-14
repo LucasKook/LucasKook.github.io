@@ -2,13 +2,6 @@
 title: "Contact"
 about:
   template: marquee
-  links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/KookLucas
-    - icon: github
-      text: GitHub
-      href: https://github.com/LucasKook
 ---
 
 ### Email
@@ -18,7 +11,14 @@ lucasheinrich dot lastname at gmail dot com
 ### Address
 
 Lucas Kook  
-Department for Mathematical Sciences  
-University of Copenhagen  
-Universitetspark 5  
-DK-2100 Copenhagen
+Institute for Statistics and Mathematics  
+Vienna University of Economics and Business  
+Welthandelsplatz 1  
+AT-1020 Vienna
+
+### Links
+
+[<img src="./img/github.svg" width="48" style="filter: invert(0.5);">](https://github.com/LucasKook)
+[<img src="./img/scholar.svg" width="48" style="filter: invert(0.5);">](https://scholar.google.com/citations?user=mkbueQkAAAAJ&hl=de&oi=ao)
+[<img src="./img/arxiv.svg" width="48" style="filter: invert(0.5);">](http://arxiv.org/a/0000-0002-7546-7356)
+[<img src="./img/orcid.svg" width="48" style="filter: invert(0.5);">](http://orcid.org/0000-0002-7546-7356)

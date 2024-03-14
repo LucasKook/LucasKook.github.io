@@ -13,9 +13,15 @@ Lucas Kook
 ```
 :::
 ::: {.column width="40%"}
+<center>
 ```{r echo=FALSE, out.width="90%", fig.align='center'}
 knitr::include_graphics("img/profile-modified.png")
 ```
+[<img src="./img/github.svg" width="48" style="filter: invert(0.5);">](https://github.com/LucasKook)
+[<img src="./img/scholar.svg" width="48" style="filter: invert(0.5);">](https://scholar.google.com/citations?user=mkbueQkAAAAJ&hl=de&oi=ao)
+[<img src="./img/arxiv.svg" width="48" style="filter: invert(0.5);">](http://arxiv.org/a/0000-0002-7546-7356)
+[<img src="./img/orcid.svg" width="48" style="filter: invert(0.5);">](http://orcid.org/0000-0002-7546-7356)
+</center>
 :::
 :::
 
