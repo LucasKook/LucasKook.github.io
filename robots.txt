@@ -1,1 +1,1 @@
-Sitemap: https://github.com/LucasKook/LucasKook.github.io/sitemap.xml
+Sitemap: https://LucasKook.github.io/sitemap.xml

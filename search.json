@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "talks.html",
+    "href": "talks.html",
+    "title": "Talks",
+    "section": "",
+    "text": "Kook L (2023). “Model-based causal feature selection for general response types.” Invited talk, UZH Econometrics Seminar.\nKook L (2023). “Distributional regression with neural networks in R.” Invited talk, CMStatistics Berlin.\nKook L (2023). “Invariant causal prediction for non-additive noise models.” Contributed talk, EMS Warsaw.\nKook L (2023). “Invariant causal prediction for non-additive noise models.” Contributed talk, NORDSTAT Gothenburg.\nKook L (2022). “Ensembling deep transformation models.” Invited talk, CMStatistics London (slides).\nKook L, Herzog L, Dürr O, Hothorn T, Wegener S, Sick B (2021). “Interpretable effect estimates in semi-structured deep distributional regression.” ISCB’42, Lyon (online).\nKook L (2021). “Ordinal neural network transformation models.” Invited talk, LMU Munich (online).\nKook L, Herzog L, Grabner H, Wegener S, Sick B (2021). “Improving treatment decisions in acute stroke using deep-learning based risk analysis.” Freenovation Science Forum (online)."
+  },
+  {
+    "objectID": "software.html",
+    "href": "software.html",
+    "title": "Software",
+    "section": "",
+    "text": "For more projects, check out my GitHub profile.\n\nMaintained R packages\nKook L (2024). “comets: Covariance Measure Tests for Conditional Independence.” R package available on GitHub and CRAN.\nKook L (2023). “tramicp: Model-Based Causal Feature Selection for General Response Types.” R package available on GitHub and on CRAN.\nKook L, Baumann PFM, Rügamer D (2022). “deeptrafo: Fitting Deep Conditional Transformation Models.” R package available on CRAN.\nKook L (2022). “tramvs: Optimal Subset Selection for Transformation Models.” R package available on CRAN.\nKook L, Tamasi B, Siegfried S, Pawel S, Hothorn T (2021). “tramnet: Penalized Transformation Models.” R package available on CRAN.\n\n\nContributed R packages\nRügamer D, Pfisterer F, Kook L, Baumann P, Kolb C (2022). “deepregression: Fitting Deep Distributional Regressions.” R package available on CRAN.\nKook L, Wolski W (2021). “prora: ORA, sigORA and GSEA Functionalities for Proteomic Data.” R package available on GitHub."
+  },
+  {
     "objectID": "publications.html",
     "href": "publications.html",
     "title": "Publications",
@@ -11,7 +25,7 @@
     "href": "index.html",
     "title": "Lucas Kook",
     "section": "",
-    "text": "I am an assistant professor of statistics at the Vienna University of Economics and Business. Before, I worked as a postdoctoral researcher in statistics and causal inference at the Copenhagen Causality Lab. Together with Niklas Pfister and Jonas Peters, I work at the intersection of distributional regression and causal inference with a focus on biomedical applications.\nI did my PhD at the University of Zurich under the supervision of Beate Sick and Torsten Hothorn. My PhD research focused on combining distributional regression models with deep learning approaches and causal inference to improve treatment decisions for acute ischemic stroke patients.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn March 2024, I started my new role as assistant professor of statistics at the Institute for Statistics and Mathematics of the Vienna University for Economics and Business.\nNew preprint 🎉 “Algorithm-agnostic significance testing in supervised learning with multimodal data” in collaboration with Anton Rask Lundborg. The corresponding comets R package is available on GitHub and CRAN.\nNew preprint 🎉 “Model-based causal feature selection for general response types” in collaboration with Sorawit Saengkyongam, Anton Rask Lundborg, Torsten Hothorn and Jonas Peters. Software implementing our method is available as an R package (tramicp on GitHub and on CRAN).\nI acquired a postdoctoral mobility grant from the Swiss National Science Foundation for my proposal on Distributional Instrumental Variables Estimation (DIVE). During the fellowship, I will be working with Niklas Pfister and Jonas Peters at the University of Copenhagen, starting March 2023.\nI successfully defended my PhD thesis titled “Deep Learning and Causal Inference with Transformation Models” in February 2023.\nNew preprint 🎉 “Estimating Conditional Distributions with Neural Networks using R package deeptrafo” with software available on CRAN."
+    "text": "I am an assistant professor of statistics at the Vienna University of Economics and Business. Before, I worked as a postdoctoral researcher in statistics and causal inference at the Copenhagen Causality Lab. Together with Niklas Pfister and Jonas Peters, I work at the intersection of distributional regression and causal inference with a focus on biomedical applications.\nI did my PhD at the University of Zurich under the supervision of Beate Sick and Torsten Hothorn. My PhD research focused on combining distributional regression models with deep learning approaches and causal inference to improve treatment decisions for acute ischemic stroke patients.\n\n\n\n\n\n\n\n\n\n\n\n   \n\n\n\n\n\n\nIn March 2024, I started my new role as assistant professor of statistics at the Institute for Statistics and Mathematics of the Vienna University for Economics and Business.\nNew preprint 🎉 “Algorithm-agnostic significance testing in supervised learning with multimodal data” in collaboration with Anton Rask Lundborg. The corresponding comets R package is available on GitHub and CRAN.\nNew preprint 🎉 “Model-based causal feature selection for general response types” in collaboration with Sorawit Saengkyongam, Anton Rask Lundborg, Torsten Hothorn and Jonas Peters. Software implementing our method is available as an R package (tramicp on GitHub and on CRAN).\nI acquired a postdoctoral mobility grant from the Swiss National Science Foundation for my proposal on Distributional Instrumental Variables Estimation (DIVE). During the fellowship, I will be working with Niklas Pfister and Jonas Peters at the University of Copenhagen, starting March 2023.\nI successfully defended my PhD thesis titled “Deep Learning and Causal Inference with Transformation Models” in February 2023.\nNew preprint 🎉 “Estimating Conditional Distributions with Neural Networks using R package deeptrafo” with software available on CRAN."
   },
   {
     "objectID": "index.html#news",
@@ -21,18 +35,25 @@
     "text": "In March 2024, I started my new role as assistant professor of statistics at the Institute for Statistics and Mathematics of the Vienna University for Economics and Business.\nNew preprint 🎉 “Algorithm-agnostic significance testing in supervised learning with multimodal data” in collaboration with Anton Rask Lundborg. The corresponding comets R package is available on GitHub and CRAN.\nNew preprint 🎉 “Model-based causal feature selection for general response types” in collaboration with Sorawit Saengkyongam, Anton Rask Lundborg, Torsten Hothorn and Jonas Peters. Software implementing our method is available as an R package (tramicp on GitHub and on CRAN).\nI acquired a postdoctoral mobility grant from the Swiss National Science Foundation for my proposal on Distributional Instrumental Variables Estimation (DIVE). During the fellowship, I will be working with Niklas Pfister and Jonas Peters at the University of Copenhagen, starting March 2023.\nI successfully defended my PhD thesis titled “Deep Learning and Causal Inference with Transformation Models” in February 2023.\nNew preprint 🎉 “Estimating Conditional Distributions with Neural Networks using R package deeptrafo” with software available on CRAN."
   },
   {
-    "objectID": "software.html",
-    "href": "software.html",
-    "title": "Software",
-    "section": "",
-    "text": "For more projects, check out my GitHub profile.\n\nMaintained R packages\nKook L (2024). “comets: Covariance Measure Tests for Conditional Independence.” R package available on GitHub and CRAN.\nKook L (2023). “tramicp: Model-Based Causal Feature Selection for General Response Types.” R package available on GitHub and on CRAN.\nKook L, Baumann PFM, Rügamer D (2022). “deeptrafo: Fitting Deep Conditional Transformation Models.” R package available on CRAN.\nKook L (2022). “tramvs: Optimal Subset Selection for Transformation Models.” R package available on CRAN.\nKook L, Tamasi B, Siegfried S, Pawel S, Hothorn T (2021). “tramnet: Penalized Transformation Models.” R package available on CRAN.\n\n\nContributed R packages\nRügamer D, Pfisterer F, Kook L, Baumann P, Kolb C (2022). “deepregression: Fitting Deep Distributional Regressions.” R package available on CRAN.\nKook L, Wolski W (2021). “prora: ORA, sigORA and GSEA Functionalities for Proteomic Data.” R package available on GitHub."
-  },
-  {
     "objectID": "news.html",
     "href": "news.html",
     "title": "News",
     "section": "",
     "text": "In March 2024, I started my new role as assistant professor of statistics at the Institute for Statistics and Mathematics of the Vienna University for Economics and Business.\nNew preprint 🎉 “Algorithm-agnostic significance testing in supervised learning with multimodal data” in collaboration with Anton Rask Lundborg. The corresponding comets R package is available on GitHub and CRAN.\nNew preprint 🎉 “Model-based causal feature selection for general response types” in collaboration with Sorawit Saengkyongam, Anton Rask Lundborg, Torsten Hothorn and Jonas Peters. Software implementing our method is available as an R package (tramicp on GitHub and on CRAN).\nI acquired a postdoctoral mobility grant from the Swiss National Science Foundation for my proposal on Distributional Instrumental Variables Estimation (DIVE). During the fellowship, I will be working with Niklas Pfister and Jonas Peters at the University of Copenhagen, starting March 2023.\nI successfully defended my PhD thesis titled “Deep Learning and Causal Inference with Transformation Models” in February 2023.\nNew preprint 🎉 “Estimating Conditional Distributions with Neural Networks using R package deeptrafo” with software available on CRAN."
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Email\nlucasheinrich dot lastname at gmail dot com\n\n\nAddress\nLucas Kook\nInstitute for Statistics and Mathematics\nVienna University of Economics and Business\nWelthandelsplatz 1\nAT-1020 Vienna\n\n\nLinks"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About me",
+    "section": "",
+    "text": "I am an assistant professor of statistics at the Vienna University of Economics and Business. Before, I worked as a postdoctoral researcher in statistics and causal inference at the Copenhagen Causality Lab. Together with Niklas Pfister and Jonas Peters, I work at the intersection of distributional regression and causal inference with a focus on biomedical applications.\nI did my PhD at the University of Zurich under the supervision of Beate Sick and Torsten Hothorn. My PhD research focused on combining distributional regression models with deep learning approaches and causal inference to improve treatment decisions for acute ischemic stroke patients."
   },
   {
     "objectID": "cv.html",
@@ -110,26 +131,5 @@
     "title": "Curriculum Vitae",
     "section": "Talks",
     "text": "Talks\nKook L (2023). “Model-based causal feature selection for general response types.” Invited talk, UZH Econometrics Seminar.\nKook L (2023). “Distributional regression with neural networks in R.” Invited talk, CMStatistics Berlin.\nKook L (2023). “Invariant causal prediction for non-additive noise models.” Contributed talk, EMS Warsaw.\nKook L (2023). “Invariant causal prediction for non-additive noise models.” Contributed talk, NORDSTAT Gothenburg.\nKook L (2022). “Ensembling deep transformation models.” Invited talk, CMStatistics London (slides).\nKook L, Herzog L, Dürr O, Hothorn T, Wegener S, Sick B (2021). “Interpretable effect estimates in semi-structured deep distributional regression.” ISCB’42, Lyon (online).\nKook L (2021). “Ordinal neural network transformation models.” Invited talk, LMU Munich (online).\nKook L, Herzog L, Grabner H, Wegener S, Sick B (2021). “Improving treatment decisions in acute stroke using deep-learning based risk analysis.” Freenovation Science Forum (online)."
-  },
-  {
-    "objectID": "talks.html",
-    "href": "talks.html",
-    "title": "Talks",
-    "section": "",
-    "text": "Kook L (2023). “Model-based causal feature selection for general response types.” Invited talk, UZH Econometrics Seminar.\nKook L (2023). “Distributional regression with neural networks in R.” Invited talk, CMStatistics Berlin.\nKook L (2023). “Invariant causal prediction for non-additive noise models.” Contributed talk, EMS Warsaw.\nKook L (2023). “Invariant causal prediction for non-additive noise models.” Contributed talk, NORDSTAT Gothenburg.\nKook L (2022). “Ensembling deep transformation models.” Invited talk, CMStatistics London (slides).\nKook L, Herzog L, Dürr O, Hothorn T, Wegener S, Sick B (2021). “Interpretable effect estimates in semi-structured deep distributional regression.” ISCB’42, Lyon (online).\nKook L (2021). “Ordinal neural network transformation models.” Invited talk, LMU Munich (online).\nKook L, Herzog L, Grabner H, Wegener S, Sick B (2021). “Improving treatment decisions in acute stroke using deep-learning based risk analysis.” Freenovation Science Forum (online)."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About me",
-    "section": "",
-    "text": "I am an assistant professor of statistics at the Vienna University of Economics and Business. Before, I worked as a postdoctoral researcher in statistics and causal inference at the Copenhagen Causality Lab. Together with Niklas Pfister and Jonas Peters, I work at the intersection of distributional regression and causal inference with a focus on biomedical applications.\nI did my PhD at the University of Zurich under the supervision of Beate Sick and Torsten Hothorn. My PhD research focused on combining distributional regression models with deep learning approaches and causal inference to improve treatment decisions for acute ischemic stroke patients."
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
-    "section": "",
-    "text": "Email\nlucasheinrich dot lastname at gmail dot com\n\n\nAddress\nLucas Kook\nDepartment for Mathematical Sciences\nUniversity of Copenhagen\nUniversitetspark 5\nDK-2100 Copenhagen"
   }
 ]
