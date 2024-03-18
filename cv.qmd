@@ -50,6 +50,8 @@ title: "Curriculum Vitae"
 
 ## Editorial responsibilities
 
+* 03/2024--present: Associate editor for [Advances in Statistical Analysis](https://link.springer.com/journal/10182/editors)
+
 * 09/2022--present: Junior editor for the [Journal of Statistical Software](https://www.jstatsoft.org/about/editorialTeam)
 
 ## Peer review
