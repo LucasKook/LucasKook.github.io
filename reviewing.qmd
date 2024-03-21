@@ -1,0 +1,22 @@
+---
+title: "Reviewing"
+---
+
+### Editorial responsibilities
+
+* 03/2024--present: Associate Editor for [Advances in Statistical Analysis](https://link.springer.com/journal/10182/editors)
+
+* 09/2022--present: Junior Editor for the [Journal of Statistical Software](https://www.jstatsoft.org/about/editorialTeam)
+
+### Peer review
+
+#### Journals
+
+* Journal of Computational and Graphical Statistics
+* Statistical Methods in Medical Research
+* Advances in Statistical Analysis
+
+#### Conferences
+
+* [AISTATS 2024](http://aistats.org/aistats2024/)
+* [UAI 2024](https://www.auai.org/uai2024/)

@@ -9,8 +9,10 @@ website:
         text: Home
       - publications.qmd
       - software.qmd
+      - teaching.qmd
+      - reviewing.qmd
       - talks.qmd
-      - cv.qmd
+      # - cv.qmd
       - contact.qmd
 
 format:

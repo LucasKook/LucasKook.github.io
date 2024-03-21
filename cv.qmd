@@ -10,7 +10,7 @@ title: "Curriculum Vitae"
 
 ## Work experience
 
-* 03/2024--present Assistant professor
+* 03/2024--present Assistant professor of Statistics
   * Vienna University of Economics and Business
 
 * 03/2023--02/2024 Postdoctoral researcher 
@@ -38,30 +38,22 @@ title: "Curriculum Vitae"
 
 ## Teaching Experience
 
-* Student supervision: I co-supervised 3 MSc students at UZH/ETHZ
+```{r child="teaching.qmd"}
 
-* STA406 Generalized Regression (UZH, FS19/20/21)
+```
 
-* STA408 Statistical methods in epidemiology (UZH, SS20)
+## Reviewing
 
-* STA402/MAT924 Likelihood inference (UZH, FS19)
+```{r child="reviewing.qmd"}
 
-* Introductory practical in physical chemistry for molecular medicine (ALU, SS18)
-
-## Editorial responsibilities
-
-* 03/2024--present: Associate editor for [Advances in Statistical Analysis](https://link.springer.com/journal/10182/editors)
-
-* 09/2022--present: Junior editor for the [Journal of Statistical Software](https://www.jstatsoft.org/about/editorialTeam)
-
-## Peer review
-
-* Statistical Methods in Medical Research
-* Journal of Computational and Graphical Statistics
+```
 
 ## Awards and Scholarships
 
-* 12/2021: GRC Travel Grant (Unviersity of Copenhagen, Host: Prof. Jonas Peters)
+* 12/2022: Postdoc.Mobility grant (Swiss National Science Foundation)
+  * Title: [Distributional Instrumental Variables Estimation
+    (DIVE)](https://data.snf.ch/grants/grant/214457)
+* 12/2021: GRC Travel Grant (University of Copenhagen, Host: Prof. Jonas Peters)
 * 2015--2020: Full scholarship of the Academic Foundation of the German People
 * 2015--2020: Full scholarship of the Lion's Club Viersen e.V.
   
@@ -69,6 +61,7 @@ title: "Curriculum Vitae"
 
 * English (Full professional proficiency)
 * German (Native proficiency)
+* Mandarin Chinese (HSK 4)
 * French (Basic knowledge)
 
 ## Software
