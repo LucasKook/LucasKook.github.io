@@ -3,6 +3,11 @@ title: "News"
 from: markdown+emoji
 ---
 
+* Just accepted :tada: ["Estimating Conditional Distributions with Neural 
+Networks using R package `deeptrafo`"](https://doi.org/10.48550/arXiv.2211.13665)
+just got accepted for publication in the Journal of Statistical Software.
+[Software](https://CRAN.R-project.org/package=deeptrafo) is available on CRAN.
+
 * In March 2024, I started my new role as assistant professor of statistics
 at the Institute for Statistics and Mathematics of the Vienna University for
 Economics and Business.
@@ -29,8 +34,4 @@ starting March 2023.
 
 * I successfully defended my PhD thesis titled "Deep Learning and Causal
 Inference with Transformation Models" in February 2023.
-
-* New preprint :tada: ["Estimating Conditional Distributions with Neural 
-Networks using R package deeptrafo"](https://doi.org/10.48550/arXiv.2211.13665)
-with [software](https://CRAN.R-project.org/package=deeptrafo) available on CRAN.
 
