@@ -3,9 +3,9 @@ title: "News"
 from: markdown+emoji
 ---
 
-* Just accepted :tada: ["Estimating Conditional Distributions with Neural 
+* Accepted :tada: ["Estimating Conditional Distributions with Neural 
 Networks using R package `deeptrafo`"](https://doi.org/10.48550/arXiv.2211.13665)
-just got accepted for publication in the Journal of Statistical Software.
+got accepted for publication in the Journal of Statistical Software.
 [Software](https://CRAN.R-project.org/package=deeptrafo) is available on CRAN.
 
 * In March 2024, I started my new role as assistant professor of statistics
