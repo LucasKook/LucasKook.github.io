@@ -5,9 +5,9 @@ from: markdown+emoji
 
 I am an assistant professor of statistics at the Vienna University of Economics
 and Business. Before, I worked as a postdoctoral researcher in statistics and
-causal inference at the [Copenhagen Causality Lab](https://cocala.github.io/).
-Together with [Niklas Pfister](https://niklaspfister.github.io) and [Jonas
-Peters](http://web.math.ku.dk/~peters/), I work at the intersection of
+causal inference at the [Copenhagen Causality Lab](https://cocala.github.io/)
+where I collaborated with [Niklas Pfister](https://niklaspfister.github.io) and
+[Jonas Peters](http://web.math.ku.dk/~peters/). I work at the intersection of
 distributional regression and causal inference with a focus on biomedical
 applications. 
 
