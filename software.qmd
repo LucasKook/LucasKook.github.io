@@ -15,3 +15,9 @@ bibtex::read.bib("software.bib")
 ```{r echo=FALSE, results='asis'}
 bibtex::read.bib("contributed.bib")
 ```
+
+### Contributed Python packages
+
+```{r echo=FALSE, results='asis'}
+bibtex::read.bib("py.bib")
+```
