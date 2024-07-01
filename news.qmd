@@ -6,6 +6,17 @@ from: markdown+emoji
 <table>
 <tr>
     <td>
+**Jun 2025**
+    </td>
+    <td>
+New preprint :tada: ["Instrumental Variable Estimation of Distributional Causal
+Effects"](https://arxiv.org/abs/2406.19986) in collaboration with [Niklas
+Pfister](https://niklaspfister.github.io). Code is available on
+[GitHub](https://github.com/LucasKook/dive.git).
+    </td>
+</tr>
+<tr>
+    <td>
 **Apr 2024**
     </td>
     <td>
