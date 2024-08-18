@@ -6,6 +6,17 @@ from: markdown+emoji
 <table>
 <tr>
     <td>
+**Aug 2024**
+    </td>
+    <td>
+      New publication :tada: ["Model-based causal feature selection for general
+      response types"](https://doi.org/10.48550/arXiv.2309.12833) has been
+      accepted for publication in the Journal of the American Statistical
+      Association.
+    </td>
+</tr>
+<tr>
+    <td>
 **Jun 2025**
     </td>
     <td>
