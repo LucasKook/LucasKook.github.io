@@ -12,6 +12,7 @@ title: "Reviewing"
 
 #### Journals
 
+* Electronic Journal of Statistics
 * Journal of Computational and Graphical Statistics
 * Statistical Methods in Medical Research
 * Advances in Statistical Analysis
