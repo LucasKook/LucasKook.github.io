@@ -3,7 +3,7 @@ title: "About me"
 from: markdown+emoji
 ---
 
-I am an assistant professor of statistics at the Vienna University of Economics
+I am assistant professor of statistics at the Vienna University of Economics
 and Business. Before, I worked as a postdoctoral researcher in statistics and
 causal inference at the [Copenhagen Causality Lab](https://cocala.github.io/)
 where I collaborated with [Niklas Pfister](https://niklaspfister.github.io) and
@@ -13,10 +13,10 @@ applications.
 
 I did my PhD at the University of Zurich under the supervision of [Beate
 Sick](https://www.ebpi.uzh.ch/en/aboutus/departments/biostatistics/teambiostats/sick.html)
-and [Torsten Hothorn](http://user.math.uzh.ch/hothorn/). My PhD research focused
-on combining distributional regression models with deep learning approaches and
-causal inference to improve treatment decisions for acute ischemic stroke
-patients.
+and [Torsten Hothorn](http://user.math.uzh.ch/hothorn/). My PhD research
+focused on combining distributional regression models with deep learning
+approaches and causal inference to improve treatment decisions for acute
+ischemic stroke patients.
 
 I currently serve as Junior Editor for the [Journal of Statistical
 Software](https://link.springer.com/journal/10182/editors) and Associate Editor
