@@ -17,7 +17,7 @@ from: markdown+emoji
 </tr>
 <tr>
     <td>
-**Jun 2025**
+**Jun 2024**
     </td>
     <td>
 New preprint :tada: ["Instrumental Variable Estimation of Distributional Causal
@@ -31,7 +31,7 @@ Pfister](https://niklaspfister.github.io). Code is available on
 **Apr 2024**
     </td>
     <td>
-New paper :tada: ["Estimating Conditional Distributions with Neural Networks
+New publication :tada: ["Estimating Conditional Distributions with Neural Networks
 using R package `deeptrafo`"](https://doi.org/10.48550/arXiv.2211.13665) got
 accepted for publication in the Journal of Statistical Software.
 [Software](https://CRAN.R-project.org/package=deeptrafo) is available on CRAN.
