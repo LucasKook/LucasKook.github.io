@@ -10,7 +10,7 @@ from: markdown+emoji
     </td>
     <td>
       New publication :tada: ["Model-based causal feature selection for general
-      response types"](https://doi.org/10.48550/arXiv.2309.12833) has been
+      response types"](https://doi.org/10.1080/01621459.2024.2395588) has been
       accepted for publication in the Journal of the American Statistical
       Association.
     </td>
