@@ -9,10 +9,26 @@ from: markdown+emoji
 **Aug 2024**
     </td>
     <td>
+New publication :tada: ["Algorithm-agnostic significance testing in supervised
+learning with multimodal data"](https://arxiv.org/abs/2402.14416) in
+collaboration with [Anton Rask Lundborg](https://www.arlundborg.com) has been
+accepted for publication in Briefings in Bioinformatics! The
+corresponding `comets` R package is available on
+[GitHub](https://github.com/LucasKook/comets.git) and
+[CRAN](https://CRAN.R-project.org/package=comets).
+    </td>
+</tr>
+<tr>
+    <td>
+**Aug 2024**
+    </td>
+    <td>
       New publication :tada: ["Model-based causal feature selection for general
       response types"](https://doi.org/10.1080/01621459.2024.2395588) has been
       accepted for publication in the Journal of the American Statistical
-      Association.
+      Association. Software implementing our method is available in the R
+      package `tramicp` [on GitHub](https://github.com/LucasKook/tramicp) and
+      [on CRAN](https://CRAN.R-project.org/package=tramicp).
     </td>
 </tr>
 <tr>
@@ -45,32 +61,6 @@ accepted for publication in the Journal of Statistical Software.
 I started my new role as assistant professor of statistics
 at the Institute for Statistics and Mathematics of the Vienna University for
 Economics and Business.
-    </td>
-</tr>
-<tr>
-    <td>
-**Feb 2024**
-    </td>
-    <td>
-New preprint :tada: ["Algorithm-agnostic significance testing in supervised
-learning with multimodal data"](https://arxiv.org/abs/2402.14416) in
-collaboration with [Anton Rask Lundborg](https://www.arlundborg.com). The
-corresponding `comets` R package is available on
-[GitHub](https://github.com/LucasKook/comets.git) and
-[CRAN](https://CRAN.R-project.org/package=comets).
-    </td>
-</tr>
-<tr>
-    <td>
-**Sep 2023**
-    </td>
-    <td>
-New preprint :tada: ["Model-based causal feature selection for general response
-types"](https://doi.org/10.48550/arXiv.2309.12833) in collaboration with Sorawit
-Saengkyongam, Anton Rask Lundborg, Torsten Hothorn and Jonas Peters. Software
-implementing our method is available as an R package (`tramicp` [on
-GitHub](https://github.com/LucasKook/tramicp) and [on
-CRAN](https://CRAN.R-project.org/package=tramicp)).
     </td>
 </tr>
 <tr>
