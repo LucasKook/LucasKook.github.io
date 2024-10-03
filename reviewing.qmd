@@ -12,6 +12,7 @@ title: "Reviewing"
 
 #### Journals
 
+* Journal of the Royal Statistical Society, Series B (Statistical Methodology)
 * Electronic Journal of Statistics
 * Journal of Computational and Graphical Statistics
 * Statistical Methods in Medical Research
