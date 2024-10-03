@@ -10,7 +10,7 @@ from: markdown+emoji
     </td>
     <td>
 New publication :tada: ["Algorithm-agnostic significance testing in supervised
-learning with multimodal data"](https://arxiv.org/abs/2402.14416) in
+learning with multimodal data"](https://doi.org/10.1093/bib/bbae475) in
 collaboration with [Anton Rask Lundborg](https://www.arlundborg.com) has been
 accepted for publication in Briefings in Bioinformatics! The
 corresponding `comets` R package is available on
