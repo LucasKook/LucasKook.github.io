@@ -12,6 +12,11 @@ title: "Teaching"
 
 #### Master students
 
+* Nicola Stella, 2024
+  * [*Using anchor regression for out-of-distribution generalization of widely
+  used risk prediction models *](https://math.ethz.ch/sfs/education/master-theses.html)
+  * ETH Zurich, co-supervised with Olga Demler and Peter Bühlmann
+
 * Andrea Götschi, 2022
   * [*Applications of ordinal neural network 
     transformation models*](https://www.biostat.uzh.ch/master-theses)
@@ -24,6 +29,11 @@ title: "Teaching"
 * Tran Xuan Thanh Elsener, 2021
   * [*Hyperparameter tuning in linear anchor regression*](https://www.biostat.uzh.ch/master-theses)
   * University of Zurich, co-supervised with Beate Sick
+
+#### Bachelor students
+
+* Marco Käferbeck, 2024 (ongoing)
+  * WU Vienna, Bachelor in Business and Economics
 
 ### Teaching experience
 
