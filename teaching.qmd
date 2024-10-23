@@ -30,11 +30,6 @@ title: "Teaching"
   * [*Hyperparameter tuning in linear anchor regression*](https://www.biostat.uzh.ch/master-theses)
   * University of Zurich, co-supervised with Beate Sick
 
-#### Bachelor students
-
-* Marco Käferbeck, 2024 (ongoing)
-  * WU Vienna, Bachelor in Business and Economics
-
 ### Teaching experience
 
 * STA406 Generalized Regression (UZH, FS19/20/21, lecturer/teaching assistant)
