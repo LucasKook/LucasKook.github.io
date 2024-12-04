@@ -48,7 +48,7 @@ Pfister](https://niklaspfister.github.io). Code is available on
     </td>
     <td>
 New publication :tada: ["Estimating Conditional Distributions with Neural Networks
-using R package `deeptrafo`"](https://doi.org/10.48550/arXiv.2211.13665) got
+using R package `deeptrafo`"](https://doi.org/https://doi.org/10.18637/jss.v111.i10) got
 accepted for publication in the Journal of Statistical Software.
 [Software](https://CRAN.R-project.org/package=deeptrafo) is available on CRAN.
     </td>
@@ -58,7 +58,7 @@ accepted for publication in the Journal of Statistical Software.
 **Mar 2024**
     </td>
     <td>
-I started my new role as assistant professor of statistics
+I started my new role as Assistant Professor of Statistics
 at the Institute for Statistics and Mathematics of the Vienna University for
 Economics and Business.
     </td>
