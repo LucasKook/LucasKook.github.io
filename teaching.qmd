@@ -4,13 +4,26 @@ title: "Teaching"
 
 ### Current teaching responsibilities
 
-* Data Analytics (WU)
+* Data Analytics (WU Vienna, Bachelor level, 60 students, WS23, SS24, WS24, SS25)
 
-* Statistik (WU)
+* Statistics (WU Vienna, Bachelor level, 180 students, WS23, SS24, WS24, SS25)
 
 ### Student supervision
 
 #### Master students
+
+* Piotr Buczek, 2025 (ongoing)
+  * WU Vienna
+
+* Margarida Ramos-Silva, 2025 (ongoing)
+  * WU Vienna
+
+* Holly Vuarnoz, 2025 (ongoing)
+  * University of Zurich, co-supervised with Torsten Hothorn
+
+* Andrea Staub, 2025
+  * Selecting data modalities for clinical prediction models using deep neural networks
+  * University of Zurich, co-supervised with Beate Sick
 
 * Nicola Stella, 2024
   * [*Using anchor regression for out-of-distribution generalization of widely
@@ -29,6 +42,10 @@ title: "Teaching"
 * Tran Xuan Thanh Elsener, 2021
   * [*Hyperparameter tuning in linear anchor regression*](https://www.biostat.uzh.ch/master-theses)
   * University of Zurich, co-supervised with Beate Sick
+
+#### Bachelor students
+
+I have supervised 8 Bachelor students at WU Vienna in Data Science or Statistics.
 
 ### Teaching experience
 
