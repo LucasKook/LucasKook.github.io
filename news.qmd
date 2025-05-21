@@ -6,6 +6,18 @@ from: markdown+emoji
 <table>
 <tr>
     <td>
+**May 2025**
+    </td>
+    <td>
+      I presented our paper ["Model-based causal feature selection for general
+      response types"](https://doi.org/10.1080/01621459.2024.2395588)
+      (published in the Journal of the American Statistical Association) as
+      part of the [AISTATS 2025 Journal-to-Conference
+      Track](https://aistats.org/aistats2025/journal-track.html).
+    </td>
+</tr>
+<tr>
+    <td>
 **Aug 2024**
     </td>
     <td>
@@ -58,9 +70,9 @@ accepted for publication in the Journal of Statistical Software.
 **Mar 2024**
     </td>
     <td>
-I started my new role as Assistant Professor of Statistics
-at the Institute for Statistics and Mathematics of the Vienna University for
-Economics and Business.
+I started my new role as Assistant Professor of Statistics at the Institute for
+      Statistics and Mathematics of the Vienna University for Economics and
+      Business.
     </td>
 </tr>
 <tr>
@@ -69,7 +81,7 @@ Economics and Business.
     </td>
     <td>
 I successfully defended my PhD thesis titled "Deep Learning and Causal Inference
-with Transformation Models".
+with Transformation Models" at the University of Zurich, Switzerland.
     </td>
 </tr>
 <tr>
