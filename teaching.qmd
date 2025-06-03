@@ -4,9 +4,9 @@ title: "Teaching"
 
 ### Current teaching responsibilities
 
-* Data Analytics (WU Vienna, Bachelor level, 60 students, WS23, SS24, WS24, SS25)
+* Data Analytics (WU Vienna, Bachelor level, 60 students, SS24, WS24, SS25)
 
-* Statistics (WU Vienna, Bachelor level, 180 students, WS23, SS24, WS24, SS25)
+* Statistics (WU Vienna, Bachelor level, 180 students, SS24, WS24, SS25)
 
 ### Student supervision
 
