@@ -2,13 +2,17 @@
 title: "Software"
 ---
 
-For more projects, check out [my GitHub profile](https://github.com/LucasKook).
+For more software-related projects, check out [my GitHub
+profile](https://github.com/LucasKook). I am co-maintainer of the [CRAN Task
+View on Machine Learning \& Statistical
+Learning](https://CRAN.R-project.org/view=MachineLearning).
 
 ### Maintained R packages
 
 ```{r echo=FALSE, results='asis'}
 bibtex::read.bib("software.bib")
 ```
+
 
 ### Contributed R packages
 
