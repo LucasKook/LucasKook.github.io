@@ -4,48 +4,56 @@ title: "Teaching"
 
 ### Current teaching responsibilities
 
-* Data Analytics (WU Vienna, Bachelor level, 60 students, SS24, WS24, SS25)
+* Data Analytics (WU Vienna, Bachelor level, 60 students, SS24, WS24, SS25, WS25)
 
-* Statistics (WU Vienna, Bachelor level, 180 students, SS24, WS24, SS25)
+* Statistics (WU Vienna, Bachelor level, 180 students, SS24, WS24, SS25, WS25)
 
 ### Student supervision
 
 #### Master students
 
-* Piotr Buczek, 2025 (ongoing)
+* Piotr Buczek, 2025, MSc Quantitative Finance
+  * *Distributional prediction of insurance claims using deep transformation
+  models*
   * WU Vienna
 
-* Margarida Ramos Silva, 2025 (ongoing)
+* Margarida Ramos Silva, 2025, MSc Quantitative Finance
+  * *Nonparametric Conditional Independence Tests: Discovering Important
+  Predictors of Credit Default*
   * WU Vienna
 
-* Holly Vuarnoz, 2025 (ongoing)
+* Holly Vuarnoz, 2025, MSc Biostatistics
+  * [*Toward causality in mobile sensing for depression: Modeling time-varying
+  behavior with functional data*](https://www.biostat.uzh.ch/master-theses)
   * University of Zurich, co-supervised with Torsten Hothorn
 
-* Andrea Staub, 2025
-  * Selecting data modalities for clinical prediction models using deep neural networks
+* Andrea Staub, 2025, MSc Biostatistics
+  * [*Selecting data modalities for clinical prediction models using deep
+  neural networks*](https://www.biostat.uzh.ch/master-theses)
   * University of Zurich, co-supervised with Beate Sick
 
-* Nicola Stella, 2024
+* Nicola Stella, 2024, MSc Statistics
   * [*Using anchor regression for out-of-distribution generalization of widely
   used risk prediction models *](https://math.ethz.ch/sfs/education/master-theses.html)
   * ETH Zurich, co-supervised with Olga Demler and Peter Bühlmann
 
-* Andrea Götschi, 2022
+* Andrea Götschi, 2022, MSc Biostatistics
   * [*Applications of ordinal neural network 
     transformation models*](https://www.biostat.uzh.ch/master-theses)
   * University of Zurich, co-supervised with Beate Sick
   
-* Maic Rakitta, 2021
+* Maic Rakitta, 2021, MSc Statistics
   * [*Generalized linear anchor regression*](https://github.com/rakittam/glare)
   * ETH Zurich, co-supervised with Peter Bühlmann
 
-* Tran Xuan Thanh Elsener, 2021
+* Tran Xuan Thanh Elsener, 2021, MSc Biostatistics
   * [*Hyperparameter tuning in linear anchor regression*](https://www.biostat.uzh.ch/master-theses)
   * University of Zurich, co-supervised with Beate Sick
 
 #### Bachelor students
 
-I have supervised 8 Bachelor students at WU Vienna in Data Science or Statistics.
+I am currently supervising 2 Bachelor students at WU Vienna. Previously, I have
+supervised 7 Bachelor students at WU Vienna in Data Science or Statistics.
 
 ### Teaching experience
 
