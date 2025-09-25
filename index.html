@@ -172,6 +172,25 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="news" class="level2">
 <h2 class="anchored" data-anchor-id="news">News</h2>
+<style>
+  table {
+    border-collapse: collapse; /* avoids double borders */
+    width: 100%;
+  }
+  td {
+    border-bottom: 1px solid #595959; /* horizontal lines */
+    padding: 6px;
+    vertical-align: mid;
+  }
+  td:first-child {
+    border-left: none; /* no extra line at far left */
+    font-weight: bold;
+    width: 15%; /* optional: controls first column width */
+  }
+  tr:last-child td {
+    border-bottom: none; /* remove last horizontal line */
+  }
+</style>
 <table>
 <tbody><tr>
 <td>
