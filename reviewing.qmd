@@ -19,6 +19,7 @@ title: "Reviewing"
 * Electronic Journal of Statistics
 * Journal of Big Data
 * Journal of Computational and Graphical Statistics
+* Journal of Consumer Behaviour
 * Journal of the Royal Statistical Society, Series B (Statistical Methodology)
 * Knowledge and Information Systems
 * R Journal
