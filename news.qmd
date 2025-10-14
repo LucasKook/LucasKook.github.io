@@ -26,6 +26,18 @@ from: markdown+emoji
 <table>
 <tr>
     <td>
+**Oct 2025**
+    </td>
+    <td>
+      New publication :tada: Our paper ["Instrumental Variable Estimation of
+      Distributional Causal Effects"](https://arxiv.org/abs/2406.19986) has
+      been accepted for publication in the Electronic Journal of Statistics.
+      This is joint work with [Niklas Pfister](https://niklaspfister.github.io).
+      Code is available on [GitHub](https://github.com/LucasKook/dive.git).
+    </td>
+</tr>
+<tr>
+    <td>
 **Jul 2025**
     </td>
     <td>
@@ -73,17 +85,6 @@ corresponding `comets` R package is available on
       Association. Software implementing our method is available in the R
       package `tramicp` [on GitHub](https://github.com/LucasKook/tramicp) and
       [on CRAN](https://CRAN.R-project.org/package=tramicp).
-    </td>
-</tr>
-<tr>
-    <td>
-**Jun 2024**
-    </td>
-    <td>
-New preprint :tada: ["Instrumental Variable Estimation of Distributional Causal
-Effects"](https://arxiv.org/abs/2406.19986) in collaboration with [Niklas
-Pfister](https://niklaspfister.github.io). Code is available on
-[GitHub](https://github.com/LucasKook/dive.git).
     </td>
 </tr>
 <tr>
