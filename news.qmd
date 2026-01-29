@@ -26,6 +26,18 @@ from: markdown+emoji
 <table>
 <tr>
     <td>
+**Jan 2026**
+    </td>
+    <td>
+      New preprint :tada: [Exact Graph Learning via Integer
+      Programming](https://doi.org/10.48550/arXiv.2601.20589)
+      is now on arXiv with code available on
+      [GitHub](https://github.com/LucasKook/glip). This is joint work with
+      [Søren Wengel Mogensen](https://soerenwengel.github.io/).
+    </td>
+</tr>
+<tr>
+    <td>
 **Oct 2025**
     </td>
     <td>
