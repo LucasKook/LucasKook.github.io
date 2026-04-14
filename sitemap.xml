@@ -2,39 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://LucasKook.github.io/reviewing.html</loc>
-    <lastmod>2025-11-07T07:46:08.587Z</lastmod>
+    <lastmod>2026-04-14T09:15:06.561Z</lastmod>
   </url>
   <url>
-    <loc>https://LucasKook.github.io/cv.html</loc>
-    <lastmod>2024-03-21T08:56:01.320Z</lastmod>
-  </url>
-  <url>
-    <loc>https://LucasKook.github.io/about.html</loc>
-    <lastmod>2025-11-07T07:45:55.931Z</lastmod>
-  </url>
-  <url>
-    <loc>https://LucasKook.github.io/teaching.html</loc>
-    <lastmod>2025-09-08T11:44:20.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://LucasKook.github.io/index.html</loc>
-    <lastmod>2024-03-14T16:40:45.022Z</lastmod>
-  </url>
-  <url>
-    <loc>https://LucasKook.github.io/news.html</loc>
-    <lastmod>2026-01-29T07:14:10.351Z</lastmod>
-  </url>
-  <url>
-    <loc>https://LucasKook.github.io/contact.html</loc>
-    <lastmod>2024-03-14T16:35:04.654Z</lastmod>
+    <loc>https://LucasKook.github.io/software.html</loc>
+    <lastmod>2025-06-03T12:44:05.597Z</lastmod>
   </url>
   <url>
     <loc>https://LucasKook.github.io/publications.html</loc>
     <lastmod>2024-04-04T08:22:53.000Z</lastmod>
   </url>
   <url>
-    <loc>https://LucasKook.github.io/software.html</loc>
-    <lastmod>2025-06-03T12:44:05.597Z</lastmod>
+    <loc>https://LucasKook.github.io/contact.html</loc>
+    <lastmod>2024-03-14T16:35:04.654Z</lastmod>
+  </url>
+  <url>
+    <loc>https://LucasKook.github.io/news.html</loc>
+    <lastmod>2026-04-14T09:18:42.555Z</lastmod>
+  </url>
+  <url>
+    <loc>https://LucasKook.github.io/index.html</loc>
+    <lastmod>2024-03-14T16:40:45.022Z</lastmod>
+  </url>
+  <url>
+    <loc>https://LucasKook.github.io/teaching.html</loc>
+    <lastmod>2026-04-14T09:10:30.013Z</lastmod>
+  </url>
+  <url>
+    <loc>https://LucasKook.github.io/about.html</loc>
+    <lastmod>2026-04-14T09:15:33.460Z</lastmod>
   </url>
   <url>
     <loc>https://LucasKook.github.io/talks.html</loc>
