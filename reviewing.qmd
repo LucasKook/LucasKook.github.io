@@ -25,10 +25,10 @@ title: "Reviewing"
 * Knowledge and Information Systems
 * R Journal
 * Statistical Methods in Medical Research
+* The American Statistician
 
 #### Conferences
 
-* [AISTATS 2026](http://aistats.org/aistats2026/), [AISTATS
-2025](http://aistats.org/aistats2025/), [AISTATS
-2024](http://aistats.org/aistats2024/)
-* [UAI 2025](https://www.auai.org/uai2025/), [UAI 2024](https://www.auai.org/uai2024/)
+* [AISTATS 2026](http://aistats.org/aistats2026/), [AISTATS 2025](http://aistats.org/aistats2025/), [AISTATS 2024](http://aistats.org/aistats2024/)
+* [UAI 2026](https://www.auai.org/uai2026/), [UAI 2025](https://www.auai.org/uai2025/), [UAI 2024](https://www.auai.org/uai2024/)
+* [NeurIPS 2026](https://neurips.cc/Conferences/2026/)

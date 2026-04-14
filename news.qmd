@@ -26,6 +26,17 @@ from: markdown+emoji
 <table>
 <tr>
     <td>
+**Apr 2026**
+    </td>
+    <td>
+      I'm excited to be joining the [Center for
+      Statistics](https://www.cbs.dk/en/research/departments/department-finance/center-statistics)
+      at [Copenhagen Business School](https://www.cbs.dk/en) as a Tenure Track
+      Assistant Professor in September 2026.
+    </td>
+</tr>
+<tr>
+    <td>
 **Jan 2026**
     </td>
     <td>

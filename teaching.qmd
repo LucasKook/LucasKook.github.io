@@ -4,22 +4,20 @@ title: "Teaching"
 
 ### Current teaching responsibilities
 
-* Data Analytics (WU Vienna, Bachelor level, 60 students, SS24, WS24, SS25, WS25)
+* Data Analytics (WU Vienna, Bachelor level, 60 students, SS24, WS24, SS25, WS25, SS26)
 
-* Statistics (WU Vienna, Bachelor level, 180 students, SS24, WS24, SS25, WS25)
+* Statistics (WU Vienna, Bachelor level, 180 students, SS24, WS24, SS25, WS25, SS26)
 
 ### Student supervision
 
 #### Master students
 
 * Piotr Buczek, 2025, MSc Quantitative Finance
-  * *Distributional prediction of insurance claims using deep transformation
-  models*
+  * *Distributional prediction of insurance claims using deep transformation models*
   * WU Vienna
 
 * Margarida Ramos Silva, 2025, MSc Quantitative Finance
-  * *Nonparametric Conditional Independence Tests: Discovering Important
-  Predictors of Credit Default*
+  * *Nonparametric Conditional Independence Tests: Discovering Important Predictors of Credit Default*
   * WU Vienna
 
 * Holly Vuarnoz, 2025, MSc Biostatistics
@@ -38,10 +36,10 @@ title: "Teaching"
   * ETH Zurich, co-supervised with Olga Demler and Peter Bühlmann
 
 * Andrea Götschi, 2022, MSc Biostatistics
-  * [*Applications of ordinal neural network 
+  * [*Applications of ordinal neural network
     transformation models*](https://www.biostat.uzh.ch/master-theses)
   * University of Zurich, co-supervised with Beate Sick
-  
+
 * Maic Rakitta, 2021, MSc Statistics
   * [*Generalized linear anchor regression*](https://github.com/rakittam/glare)
   * ETH Zurich, co-supervised with Peter Bühlmann
@@ -52,8 +50,8 @@ title: "Teaching"
 
 #### Bachelor students
 
-I am currently supervising 2 Bachelor students at WU Vienna. Previously, I have
-supervised 7 Bachelor students at WU Vienna in Data Science or Statistics.
+I am currently supervising 3 Bachelor students at WU Vienna. Previously, I have
+supervised 10 Bachelor students at WU Vienna in Data Science or Statistics.
 
 ### Teaching experience
 
