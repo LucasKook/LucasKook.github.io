@@ -16,6 +16,7 @@ title: "Reviewing"
 
 #### Journals
 
+* Annals of Applied Statistics
 * Advances in Statistical Analysis
 * Electronic Journal of Statistics
 * Journal of Big Data
