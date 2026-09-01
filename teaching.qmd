@@ -4,9 +4,7 @@ title: "Teaching"
 
 ### Current teaching responsibilities
 
-* Data Analytics (WU Vienna, Bachelor level, 60 students, SS24, WS24, SS25, WS25, SS26)
-
-* Statistics (WU Vienna, Bachelor level, 180 students, SS24, WS24, SS25, WS25, SS26)
+* Quantitative methods (CBS, Master level, 60 students, WS26)
 
 ### Student supervision
 
@@ -50,10 +48,13 @@ title: "Teaching"
 
 #### Bachelor students
 
-I am currently supervising 3 Bachelor students at WU Vienna. Previously, I have
-supervised 10 Bachelor students at WU Vienna in Data Science or Statistics.
+I have supervised 13 Bachelor students at WU Vienna in Data Science or Statistics.
 
 ### Teaching experience
+
+* Data Analytics (WU Vienna, Bachelor level, 60 students, SS24, WS24, SS25, WS25, SS26)
+
+* Statistics (WU Vienna, Bachelor level, 180 students, SS24, WS24, SS25, WS25, SS26)
 
 * STA406 Generalized Regression (UZH, FS19/20/21, lecturer/teaching assistant)
 

@@ -3,11 +3,12 @@ title: "About me"
 from: markdown+emoji
 ---
 
-I am an assistant professor of statistics at the Vienna University of Economics
-and Business. Before, I worked as a postdoctoral researcher in statistics and
-causal inference at the [Copenhagen Causality Lab](https://cocala.github.io/)
-where I collaborated with [Niklas Pfister](https://niklaspfister.github.io) and
-[Jonas Peters](https://people.math.ethz.ch/~jopeters/). I work at the intersection of
+I am a tenure track assistant professor of statistics at Copenhagen Business
+School. Before, I was assistant professor at the Vienna University of Economics
+and Business and a postdoctoral researcher in statistics and causal inference
+at the [Copenhagen Causality Lab](https://cocala.github.io/) where I
+collaborated with [Niklas Pfister](https://niklaspfister.github.io) and [Jonas
+Peters](https://people.math.ethz.ch/~jopeters/). I work at the intersection of
 distributional regression and causal inference with a focus on biomedical
 applications.
 
