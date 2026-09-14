@@ -16,12 +16,13 @@ title: "Reviewing"
 
 #### Journals
 
-* Annals of Applied Statistics
 * Advances in Statistical Analysis
+* Annals of Applied Statistics
 * Electronic Journal of Statistics
 * Journal of Big Data
 * Journal of Computational and Graphical Statistics
 * Journal of Consumer Behaviour
+* Journal of Machine Learning Research
 * Journal of the Royal Statistical Society, Series B (Statistical Methodology)
 * Knowledge and Information Systems
 * R Journal
